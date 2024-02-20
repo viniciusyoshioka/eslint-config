@@ -5,7 +5,27 @@
     "license": "MIT",
     "main": ".eslintrc.js",
     "files": [
-        ".eslintrc.js"
+        ".eslintrc.js",
+        "README.md"
+    ],
+    "author": "Vinicius Yoshioka <71671043+viniciusyoshioka@users.noreply.github.com> (https://github.com/viniciusyoshioka)",
+    "repository": "https://github.com/viniciusyoshioka/eslint-config",
+    "bugs": {
+        "url": "https://github.com/viniciusyoshioka/eslint-config/issues"
+    },
+    "homepage": "https://github.com/viniciusyoshioka/eslint-config",
+    "publishConfig": {
+        "registry": "https://registry.npmjs.org/"
+    },
+    "keywords": [
+        "JavaScript",
+        "JS",
+        "TypeScript",
+        "TS",
+        "configuration",
+        "config",
+        "eslint",
+        "lint"
     ],
     "scripts": {},
     "peerDependencies": {
