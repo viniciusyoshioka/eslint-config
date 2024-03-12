@@ -66,7 +66,7 @@ module.exports = {
         ],
         "indent": [
             "warn",
-            4,
+            2,
             {
                 "SwitchCase": 1,
                 "ignoredNodes": [
