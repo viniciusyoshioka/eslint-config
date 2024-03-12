@@ -97,8 +97,8 @@ module.exports = {
         "max-len": [
             "warn",
             {
-                "code": 120,
-                "comments": 120,
+                "code": 80,
+                "comments": 80,
                 "ignorePattern": "^\\s*var\\s.+=\\s*require\\s*\\(",
                 "ignoreRegExpLiterals": true,
                 "ignoreStrings": true,
