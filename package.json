@@ -35,12 +35,14 @@
         "@stylistic/eslint-plugin": "*",
         "@typescript-eslint/eslint-plugin": "*",
         "@typescript-eslint/parser": "*",
-        "eslint": ">=8.40.0"
+        "eslint": ">=8.40.0",
+        "typescript": "*"
     },
     "devDependencies": {
         "@stylistic/eslint-plugin": "^1.7.0",
         "@typescript-eslint/eslint-plugin": "^7.2.0",
         "@typescript-eslint/parser": "^7.2.0",
-        "eslint": "^8.56.0"
+        "eslint": "^8.56.0",
+        "typescript": "^5.4.2"
     }
 }
