@@ -8,6 +8,7 @@ module.exports = {
 
     plugins: [
         "@typescript-eslint",
+        "@stylistic",
     ],
 
     parser: "@typescript-eslint/parser",
