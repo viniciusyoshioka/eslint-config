@@ -30,7 +30,9 @@
         "eslint",
         "lint"
     ],
-    "scripts": {},
+    "scripts": {
+        "build": "tsc"
+    },
     "peerDependencies": {
         "@stylistic/eslint-plugin": "*",
         "@typescript-eslint/eslint-plugin": "*",
