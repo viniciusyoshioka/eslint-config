@@ -111,6 +111,7 @@ module.exports = {
                 "=": "after",
             },
         }],
+        "@stylistic/padded-blocks": "off",
         "@stylistic/quotes": ["warn", "double", {
             avoidEscape: true,
             allowTemplateLiterals: true,
