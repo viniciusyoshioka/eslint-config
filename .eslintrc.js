@@ -26,6 +26,7 @@ module.exports = {
         node: true,
     },
     rules: {
+        // @stylistic - stylistic rules
         ...recommendedExtendsRules,
         "@stylistic/array-bracket-newline": ["warn", "consistent"],
         "@stylistic/arrow-parens": ["warn", "as-needed"],
