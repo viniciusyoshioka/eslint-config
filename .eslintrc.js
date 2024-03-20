@@ -146,6 +146,13 @@ module.exports = {
         "@stylistic/wrap-regex": "off",
         "@stylistic/yield-star-spacing": ["warn", "before"],
 
+        // eslint - lint rules
+        "no-constant-binary-expression": "warn",
+        "no-duplicate-imports": "warn",
+        "no-self-compare": "warn",
+        "no-unreachable-loop": "warn",
+        "max-depth": "warn",
+
         // @typescript-eslint - stylistic rules
         "@typescript-eslint/adjacent-overload-signatures": "warn",
         // @typescript-eslint - lint rules
