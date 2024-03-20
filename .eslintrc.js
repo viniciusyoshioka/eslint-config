@@ -58,7 +58,7 @@ module.exports = {
         }],
         "@stylistic/jsx-indent-props": ["warn", 4],
         "@stylistic/jsx-quotes": ["warn", "prefer-double"],
-        "@stylistic/jsx-self-closing-comp": ["error", {
+        "@stylistic/jsx-self-closing-comp": ["warn", {
             component: true,
             html: true,
         }],
