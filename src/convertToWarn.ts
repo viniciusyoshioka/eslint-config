@@ -14,7 +14,7 @@ import { Linter } from "eslint"
  * @returns The same eslint object, but transformed
  */
 export function convertToWarn(rules: Partial<Linter.RulesRecord>): Linter.RulesRecord {
-    let transformedRules: Linter.RulesRecord = {}
+    const transformedRules: Linter.RulesRecord = {}
 
     const rulesKeys = Object.keys(rules)
     for (let i = 0; i < rulesKeys.length; i++) {
