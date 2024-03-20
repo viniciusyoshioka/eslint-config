@@ -1,15 +1,18 @@
 # @vinicius1313/eslint-config
 
-This library contains the ESlint configurations I use in my projects. It also supports TypeScript.
+This library contains the ESlint configurations I use in my projects.
+It also supports TypeScript.
 
 ## Installation
 
-Note that this library requires `eslint`, `@typescript-eslint/parser` and `@typescript-eslint/eslint-plugin` to work. You can install them with:
+Note that this library requires `eslint`, `@stylistic/eslint-plugin`,
+`@typescript-eslint/eslint-plugin`, `@typescript-eslint/parser` and
+`typescript` to work. You can install them with:
 
 ```sh
-npm install -D @vinicius1313/eslint-config eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin
+npm install -D @vinicius1313/eslint-config eslint @stylistic/eslint-plugin @typescript-eslint/eslint-plugin @typescript-eslint/parser typescript
 # or
-yarn add -D @vinicius1313/eslint-config eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin
+yarn add -D @vinicius1313/eslint-config eslint @stylistic/eslint-plugin @typescript-eslint/eslint-plugin @typescript-eslint/parser typescript
 ```
 
 ## Usage
