@@ -19,16 +19,6 @@ yarn add -D @vinicius1313/eslint-config eslint @stylistic/eslint-plugin @typescr
 
 To use the library, edit you eslint config file:
 
-- `.eslintrc.json`:
-
-```json
-{
-    "extends": "@vinicius1313/eslint-config",
-    "root": true,
-    // ...
-}
-```
-
 - `.eslintrc.js` as Module:
 
 ```js
