@@ -23,7 +23,8 @@ To use the library, edit you eslint config file:
 
 ```json
 {
-    "extends": "@vinicius1313/eslint-config"
+    "extends": "@vinicius1313/eslint-config",
+    "root": true,
     // ...
 }
 ```
@@ -34,6 +35,7 @@ To use the library, edit you eslint config file:
 /** @type {import('eslint').ESLint.ConfigData} */
 export default {
     extends: "@vinicius1313/eslint-config",
+    root: true,
     // ...
 }
 ```
@@ -44,6 +46,7 @@ export default {
 /** @type {import('eslint').ESLint.ConfigData} */
 module.exports = {
     extends: "@vinicius1313/eslint-config",
+    root: true,
     // ...
 }
 ```
