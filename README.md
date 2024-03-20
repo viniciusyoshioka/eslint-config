@@ -26,6 +26,9 @@ To use the library, edit you eslint config file:
 export default {
     extends: "@vinicius1313/eslint-config",
     root: true,
+    parserOptions: {
+        tsconfigRootDir: __dirname,
+    },
     // ...
 }
 ```
@@ -37,6 +40,9 @@ export default {
 module.exports = {
     extends: "@vinicius1313/eslint-config",
     root: true,
+    parserOptions: {
+        tsconfigRootDir: __dirname,
+    },
     // ...
 }
 ```
