@@ -14,40 +14,40 @@ import { Linter } from "eslint"
  * @returns The same eslint object, but transformed
  */
 export function convertToWarn(rules: Partial<Linter.RulesRecord>): Linter.RulesRecord {
-    const transformedRules: Linter.RulesRecord = {}
+  const transformedRules: Linter.RulesRecord = {}
 
-    const rulesKeys = Object.keys(rules)
-    for (let i = 0; i < rulesKeys.length; i++) {
-        const ruleKey = rulesKeys[i]
-        const ruleValue = rules[ruleKey]
+  const rulesKeys = Object.keys(rules)
+  for (let i = 0; i < rulesKeys.length; i++) {
+    const ruleKey = rulesKeys[i]
+    const ruleValue = rules[ruleKey]
 
-        if (typeof ruleValue === "undefined") {
-            continue
-        }
-
-        if (typeof ruleValue === "number" && ruleValue === 2) {
-            transformedRules[ruleKey] = 1
-            continue
-        }
-
-        if (typeof ruleValue === "string" && ruleValue === "error") {
-            transformedRules[ruleKey] = "warn"
-            continue
-        }
-
-        if (typeof ruleValue === "object") {
-            if (ruleValue[0] === 2) {
-                transformedRules[ruleKey] = [1, ...ruleValue.slice(1)]
-                continue
-            }
-            if (ruleValue[0] === "error") {
-                transformedRules[ruleKey] = ["warn", ...ruleValue.slice(1)]
-                continue
-            }
-        }
-
-        transformedRules[ruleKey] = ruleValue
+    if (typeof ruleValue === "undefined") {
+      continue
     }
 
-    return transformedRules
+    if (typeof ruleValue === "number" && ruleValue === 2) {
+      transformedRules[ruleKey] = 1
+      continue
+    }
+
+    if (typeof ruleValue === "string" && ruleValue === "error") {
+      transformedRules[ruleKey] = "warn"
+      continue
+    }
+
+    if (typeof ruleValue === "object") {
+      if (ruleValue[0] === 2) {
+        transformedRules[ruleKey] = [1, ...ruleValue.slice(1)]
+        continue
+      }
+      if (ruleValue[0] === "error") {
+        transformedRules[ruleKey] = ["warn", ...ruleValue.slice(1)]
+        continue
+      }
+    }
+
+    transformedRules[ruleKey] = ruleValue
+  }
+
+  return transformedRules
 }
