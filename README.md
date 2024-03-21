@@ -17,6 +17,8 @@ yarn add -D @vinicius1313/eslint-config eslint @stylistic/eslint-plugin @typescr
 
 ## Usage
 
+### Updating `.eslintrc.*` file
+
 To use the library, edit you eslint config file:
 
 - `.eslintrc.js` as Module:
@@ -46,3 +48,9 @@ module.exports = {
     // ...
 }
 ```
+
+### Updating `tsconfig.json` file
+
+After updating the ESLint config, change your `tsconfig.json` file to contain the files
+to be linted in `include` field. If you haven't added, ESLint won't be able to lint your
+files.
