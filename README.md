@@ -54,3 +54,32 @@ module.exports = {
 After updating the ESLint config, change your `tsconfig.json` file to
 contain the files to be linted in the `include` field. If you haven't added,
 ESLint won't be able to lint your files.
+
+### Configuring to lint the files without compiling them
+
+To be able to lint your code, ESLint needs your `tsconfig.json` file.
+And to do so, you also have to add the paths of the files to be linted
+in the `include` field of `tsconfig.json`.
+
+However, sometimes you have files that you just want to lint, but not compile.
+In this case, you can fix the problem creating a second TypeScript configuration
+file, just for ESLint. The [`@typescript-eslint` documentation](https://typescript-eslint.io/troubleshooting/#fixing-the-error) recommends calling
+it `tsconfig.eslint.json`.
+
+In `tsconfig.eslint.json`, extends the configuration from you main `tsconfig.json`
+and add all the files you want to lint in the `include` field.
+
+Then, change the `parserOptions` field of `.eslintrc.js` to:
+
+```js
+/** @type {import('eslint').ESLint.ConfigData} */
+module.exports = {
+    extends: "@vinicius1313/eslint-config",
+    root: true,
+    parserOptions: {
+        project: "tsconfig.eslint.json",
+        tsconfigRootDir: __dirname,
+    },
+    // ...
+}
+```
