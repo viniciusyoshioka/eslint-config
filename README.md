@@ -51,6 +51,6 @@ module.exports = {
 
 ### Updating `tsconfig.json` file
 
-After updating the ESLint config, change your `tsconfig.json` file to contain the files
-to be linted in `include` field. If you haven't added, ESLint won't be able to lint your
-files.
+After updating the ESLint config, change your `tsconfig.json` file to
+contain the files to be linted in the `include` field. If you haven't added,
+ESLint won't be able to lint your files.
