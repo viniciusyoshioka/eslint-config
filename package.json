@@ -1,6 +1,6 @@
 {
   "name": "@vinicius1313/eslint-config",
-  "description": "Eslint configuration (includes TypeScript)",
+  "description": "Eslint configuration (includes JS and TS linting and formatting)",
   "version": "1.2.2",
   "license": "MIT",
   "main": ".eslintrc.js",
@@ -30,7 +30,9 @@
     "configuration",
     "config",
     "eslint",
-    "lint"
+    "lint",
+    "format",
+    "formatting"
   ],
   "scripts": {
     "build:commonjs": "tsc -p ./configs/tsconfig.commonjs.json",
