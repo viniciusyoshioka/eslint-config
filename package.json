@@ -33,7 +33,10 @@
     "lint"
   ],
   "scripts": {
-    "build": "tsc"
+    "build:commonjs": "tsc -p ./configs/tsconfig.commonjs.json",
+    "build:module": "tsc -p ./configs/tsconfig.module.json",
+    "build:types": "tsc -p ./configs/tsconfig.types.json",
+    "build": "yarn build:commonjs && yarn build:module && yarn build:types"
   },
   "peerDependencies": {
     "@stylistic/eslint-plugin": "*",

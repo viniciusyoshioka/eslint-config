@@ -1,19 +1,19 @@
 {
-  "compilerOptions": {
-    "rootDir": "src",
-    "outDir": "lib",
-    "module": "CommonJS",
-    "lib": [
-      "ES6"
+    "compilerOptions": {
+        "rootDir": "src",
+        "outDir": "lib",
+        "module": "Node16",
+        "moduleResolution": "Node16",
+        "lib": [
+            "ES6",
+        ],
+        "noEmit": true,
+        "strict": true,
+    },
+    "include": [
+        "src",
     ],
-    "declaration": true,
-    "strict": true,
-  },
-  "include": [
-    "src",
-    ".eslintrc.js",
-  ],
-  "exclude": [
-    "node_modules",
-  ],
+    "exclude": [
+        "node_modules",
+    ],
 }
