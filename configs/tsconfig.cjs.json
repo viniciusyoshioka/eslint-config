@@ -1,7 +1,7 @@
 {
     "extends": "../tsconfig.json",
     "compilerOptions": {
-        "outDir": "../lib/commonjs",
+        "outDir": "../libs/commonjs",
         "module": "CommonJS",
         "moduleResolution": "Node",
         "noEmit": false,
