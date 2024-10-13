@@ -5,7 +5,7 @@
         "module": "Node16",
         "moduleResolution": "Node16",
         "lib": [
-            "ES6",
+            "ES2016",
         ],
         "noEmit": true,
         "strict": true,
