@@ -41,7 +41,7 @@
     "build": "yarn build:commonjs && yarn build:module && yarn build:types"
   },
   "peerDependencies": {
-    "eslint": ">=8.40.0",
+    "eslint": "*",
     "typescript": "*"
   },
   "peerDependenciesMeta": {
