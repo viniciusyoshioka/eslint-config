@@ -41,7 +41,6 @@
     "build": "yarn build:commonjs && yarn build:module && yarn build:types"
   },
   "peerDependencies": {
-    "@stylistic/eslint-plugin": "*",
     "eslint": ">=8.40.0",
     "typescript": "*"
   },
