@@ -5,7 +5,7 @@
   "license": "MIT",
   "main": ".eslintrc.js",
   "files": [
-    "lib",
+    "libs",
     "src",
     ".eslintrc.js",
     "README.md"
