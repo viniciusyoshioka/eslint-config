@@ -24,7 +24,7 @@ To use the library, edit you eslint config file:
 - `.eslintrc.js` as Module:
 
 ```js
-/** @type {import('eslint').ESLint.ConfigData} */
+/** @type {import("eslint").ESLint.ConfigData} */
 export default {
     extends: "@vinicius1313/eslint-config",
     root: true,
@@ -38,7 +38,7 @@ export default {
 - `.eslintrc.js` as CommonJS:
 
 ```js
-/** @type {import('eslint').ESLint.ConfigData} */
+/** @type {import("eslint").ESLint.ConfigData} */
 module.exports = {
     extends: "@vinicius1313/eslint-config",
     root: true,
@@ -72,7 +72,7 @@ and add all the files you want to lint in the `include` field.
 Then, change the `parserOptions` field of `.eslintrc.js` to:
 
 ```js
-/** @type {import('eslint').ESLint.ConfigData} */
+/** @type {import("eslint").ESLint.ConfigData} */
 module.exports = {
     extends: "@vinicius1313/eslint-config",
     root: true,
