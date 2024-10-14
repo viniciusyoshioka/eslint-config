@@ -1,4 +1,4 @@
-import { defaultConfig } from "./src/configs/default.js"
+import { configs } from "./src/configs/index.js"
 
 
-export default defaultConfig
+export default configs.default
