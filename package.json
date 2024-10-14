@@ -3,7 +3,14 @@
   "description": "Eslint configuration (includes linting and formatting JS and TS)",
   "version": "1.2.2",
   "license": "MIT",
-  "main": ".eslintrc.js",
+  "exports": {
+    ".": {
+      "types": "./libs/types/configs/index.d.ts",
+      "require": "./libs/commonjs/configs/index.js",
+      "import": "./libs/module/configs/index.js",
+      "default": "./libs/module/configs/index.js"
+    }
+  },
   "files": [
     "libs",
     "src",
