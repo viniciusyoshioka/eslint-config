@@ -4,7 +4,6 @@
         "outDir": "../libs/commonjs",
         "module": "CommonJS",
         "moduleResolution": "Node",
-        "noEmit": false,
         "skipLibCheck": true,
     },
 }

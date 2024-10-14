@@ -7,7 +7,6 @@
         "lib": [
             "ES2016",
         ],
-        "noEmit": true,
         "strict": true,
         "allowJs": true,
     },
