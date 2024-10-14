@@ -7,7 +7,6 @@
   "files": [
     "libs",
     "src",
-    ".eslintrc.js",
     "README.md"
   ],
   "author": "Vinicius Yoshioka <71671043+viniciusyoshioka@users.noreply.github.com> (https://github.com/viniciusyoshioka)",
