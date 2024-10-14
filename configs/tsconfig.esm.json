@@ -2,6 +2,9 @@
     "extends": "../tsconfig.json",
     "compilerOptions": {
         "outDir": "../libs/module",
+        "declarationDir": "../libs/types",
+        "declaration": true,
+        "declarationMap": true,
         "noEmit": false,
     },
 }

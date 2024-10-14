@@ -37,8 +37,7 @@
   "scripts": {
     "build:commonjs": "tsc -p ./configs/tsconfig.cjs.json",
     "build:module": "tsc -p ./configs/tsconfig.esm.json",
-    "build:types": "tsc -p ./configs/tsconfig.types.json",
-    "build": "yarn build:commonjs && yarn build:module && yarn build:types"
+    "build": "yarn build:commonjs && yarn build:module"
   },
   "peerDependencies": {
     "eslint": "*",
