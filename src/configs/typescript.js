@@ -1,30 +1,17 @@
 import tslint from "typescript-eslint"
 
+import { alwaysIgnorePaths, jsFileAnyPath, tsFileAnyPath } from "./constants.js"
+
 
 /** @type {import("eslint").Linter.Config[]} */
 export const typescriptConfig = [
   ...tslint.configs.recommended,
   {
-    ignores: [
-      "**/node_modules/**",
-      "**/build/**",
-      "**/dist/**",
-      "**/lib/**",
-      "**/libs/**",
-      "**/public/**",
-    ],
+    ignores: alwaysIgnorePaths,
   },
   {
-    files: [
-      "**/*.ts",
-      "**/*.cts",
-      "**.*.mts",
-    ],
-    ignores: [
-      "**/*.js",
-      "**/*.cjs",
-      "**/*.mjs",
-    ],
+    files: tsFileAnyPath,
+    ignores: jsFileAnyPath,
     plugins: {
       "@typescript-eslint": tslint.plugin,
     },

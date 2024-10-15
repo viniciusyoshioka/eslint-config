@@ -2,6 +2,7 @@ import stylistic from "@stylistic/eslint-plugin"
 import tslint from "typescript-eslint"
 
 import { convertAllRulesToWarn } from "../utils/convertAllRulesToWarn.js"
+import { alwaysIgnorePaths, jsFileAnyPath, tsFileAnyPath } from "./constants.js"
 
 
 const stylisticRecommended = stylistic.configs["recommended-flat"]
@@ -21,24 +22,12 @@ export const formattingConfig = [
     },
   },
   {
-    ignores: [
-      "**/node_modules/**",
-      "**/build/**",
-      "**/dist/**",
-      "**/lib/**",
-      "**/libs/**",
-      "**/public/**",
-    ],
+    ignores: alwaysIgnorePaths,
   },
   {
     files: [
-      "**/*.js",
-      "**/*.cjs",
-      "**/*.mjs",
-      "**/*.ts",
-      "**/*.cts",
-      "**/*.mts",
-      "**/*.tsx",
+      ...jsFileAnyPath,
+      ...tsFileAnyPath,
     ],
     rules: {
       "@stylistic/array-bracket-newline": ["warn", "consistent"],

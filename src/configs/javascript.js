@@ -1,25 +1,16 @@
 import eslint from "@eslint/js"
 
+import { alwaysIgnorePaths, jsFileAnyPath } from "./constants.js"
+
 
 /** @type {import("eslint").Linter.Config[]} */
 export const javascriptConfig = [
   eslint.configs.recommended,
   {
-    ignores: [
-      "**/node_modules/**",
-      "**/build/**",
-      "**/dist/**",
-      "**/lib/**",
-      "**/libs/**",
-      "**/public/**",
-    ],
+    ignores: alwaysIgnorePaths,
   },
   {
-    files: [
-      "**/*.js",
-      "**/*.cjs",
-      "**/*.mjs",
-    ],
+    files: jsFileAnyPath,
     rules: {
       "no-constant-binary-expression": "warn",
       "no-duplicate-imports": "warn",
