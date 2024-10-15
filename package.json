@@ -42,9 +42,7 @@
     "formatting"
   ],
   "scripts": {
-    "build:commonjs": "tsc -p ./configs/tsconfig.cjs.json",
-    "build:module": "tsc -p ./configs/tsconfig.esm.json",
-    "build": "yarn build:commonjs && yarn build:module"
+    "build": "yarn tsc"
   },
   "peerDependencies": {
     "eslint": ">= 9",

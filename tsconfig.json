@@ -9,6 +9,11 @@
         ],
         "strict": true,
         "allowJs": true,
+        "declarationDir": "./libs/types",
+        "declaration": true,
+        "declarationMap": true,
+        "emitDeclarationOnly": true,
+        "skipLibCheck": true,
     },
     "include": [
         "src",
