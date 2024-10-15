@@ -14,17 +14,10 @@ export const formattingConfig = [
   stylisticRecommended,
   stylistic.configs["disable-legacy"],
   {
-    plugins: {
-      "@typescript-eslint": tslint.plugin,
-    },
-    languageOptions: {
-      parser: tslint.parser,
-    },
-  },
-  {
     ignores: alwaysIgnorePaths,
   },
   {
+    name: "formatting",
     files: [
       ...jsFileAnyPath,
       ...tsFileAnyPath,
@@ -142,6 +135,18 @@ export const formattingConfig = [
       }],
       "@stylistic/wrap-regex": "off",
       "@stylistic/yield-star-spacing": ["warn", "before"],
+    },
+  },
+  {
+    name: "typescript_formatting",
+    plugins: {
+      "@typescript-eslint": tslint.plugin,
+    },
+    languageOptions: {
+      parser: tslint.parser,
+    },
+    rules: {
+      "@typescript-eslint/adjacent-overload-signatures": "warn",
     },
   },
 ]

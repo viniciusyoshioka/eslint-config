@@ -23,10 +23,6 @@ export const typescriptConfig = [
       },
     },
     rules: {
-      // typescript-eslint - stylistic rules
-      "@typescript-eslint/adjacent-overload-signatures": "warn",
-
-      // typescript-eslint - lint rules
       "consistent-return": "off",
       "@typescript-eslint/consistent-return": "error",
       "@typescript-eslint/explicit-module-boundary-types": "off",
