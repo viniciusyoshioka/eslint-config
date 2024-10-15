@@ -10,6 +10,7 @@ export const javascriptConfig = [
     ignores: alwaysIgnorePaths,
   },
   {
+    name: "javascript_lint",
     files: jsFileAnyPath,
     rules: {
       "no-constant-binary-expression": "warn",
