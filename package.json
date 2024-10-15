@@ -7,9 +7,9 @@
   "exports": {
     ".": {
       "types": "./libs/types/configs/index.d.ts",
-      "require": "./libs/commonjs/configs/index.js",
-      "import": "./libs/module/configs/index.js",
-      "default": "./libs/module/configs/index.js"
+      "require": "./src/configs/legacy.cjs",
+      "import": "./src/configs/index.js",
+      "default": "./src/configs/index.js"
     }
   },
   "files": [
