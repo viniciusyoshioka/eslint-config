@@ -10,6 +10,7 @@ export const typescriptConfig = [
     ignores: alwaysIgnorePaths,
   },
   {
+    name: "typescript_lint",
     files: tsFileAnyPath,
     ignores: jsFileAnyPath,
     plugins: {
