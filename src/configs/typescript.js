@@ -1,6 +1,6 @@
 import tslint from "typescript-eslint"
 
-import { alwaysIgnorePaths, jsFileAnyPath, tsFileAnyPath } from "./constants.js"
+import { alwaysIgnorePaths, jsFileAnyPath, tsFileAnyPath } from "../constants.js"
 
 
 /** @type {import("eslint").Linter.Config[]} */

@@ -1,8 +1,8 @@
 import stylistic from "@stylistic/eslint-plugin"
 import tslint from "typescript-eslint"
 
+import { alwaysIgnorePaths, jsFileAnyPath, tsFileAnyPath } from "../constants.js"
 import { convertAllRulesToWarn } from "../utils/convertAllRulesToWarn.js"
-import { alwaysIgnorePaths, jsFileAnyPath, tsFileAnyPath } from "./constants.js"
 
 
 const stylisticRecommended = stylistic.configs["recommended-flat"]

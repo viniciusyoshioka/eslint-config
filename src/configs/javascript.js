@@ -2,8 +2,8 @@ import eslint from "@eslint/js"
 import globals from "globals"
 import tslint from "typescript-eslint"
 
+import { alwaysIgnorePaths, jsFileAnyPath, tsFileAnyPath } from "../constants.js"
 import { customGlobals } from "../globals/index.js"
-import { alwaysIgnorePaths, jsFileAnyPath, tsFileAnyPath } from "./constants.js"
 
 
 /** @type {import("eslint").Linter.Config[]} */
