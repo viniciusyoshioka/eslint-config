@@ -1,6 +1,7 @@
 import eslint from "@eslint/js"
+import tslint from "typescript-eslint"
 
-import { alwaysIgnorePaths, jsFileAnyPath } from "./constants.js"
+import { alwaysIgnorePaths, jsFileAnyPath, tsFileAnyPath } from "./constants.js"
 
 
 /** @type {import("eslint").Linter.Config[]} */
@@ -11,7 +12,16 @@ export const javascriptConfig = [
   },
   {
     name: "javascript_lint",
-    files: jsFileAnyPath,
+    files: [
+      ...jsFileAnyPath,
+      ...tsFileAnyPath,
+    ],
+    plugins: {
+      "@typescript-eslint": tslint.plugin,
+    },
+    languageOptions: {
+      parser: tslint.parser,
+    },
     rules: {
       "no-constant-binary-expression": "warn",
       "no-duplicate-imports": "warn",
