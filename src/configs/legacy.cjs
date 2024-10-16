@@ -1,4 +1,4 @@
-// eslint-disable-next-line @typescript-eslint/no-require-imports, no-undef
+// eslint-disable-next-line @typescript-eslint/no-require-imports
 const { name } = require("../../package.json")
 
 
