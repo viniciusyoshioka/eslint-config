@@ -16,10 +16,10 @@ yarn add -D eslint typescript @vinicius1313/eslint-config
 
 ## Version compatibility
 
-| Library version   | ESLint version | ESLint Config | Previous documentation                      |
--------------------|----------------|---------------|---------------------------------------------
-`>= 2.0.0` | `>= 9` | Flat | -
-`1.0.0` - `1.2.2` | `< 9` | Legacy | [See v1 documentation](./docs/README-v1.md)
+| Library version | ESLint version | ESLint Config | TypeScript version | Previous documentation |
+|-----------------|----------------|---------------|--------------------|------------------------|
+`>= 2.0.0` | `>= 9` | Flat | `< 5.6` | -
+`1.0.0` - `1.2.2` | `< 9` | Legacy | ? | [See v1 documentation](./docs/README-v1.md)
 
 ## Usage
 
