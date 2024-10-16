@@ -42,7 +42,8 @@
     "formatting"
   ],
   "scripts": {
-    "build": "yarn tsc"
+    "build": "yarn tsc",
+    "lint": "yarn eslint"
   },
   "peerDependencies": {
     "eslint": ">= 9",
