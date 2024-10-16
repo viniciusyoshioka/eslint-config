@@ -47,7 +47,7 @@
   },
   "peerDependencies": {
     "eslint": ">= 9",
-    "typescript": "*"
+    "typescript": "5.5.x"
   },
   "peerDependenciesMeta": {
     "typescript": {
