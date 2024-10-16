@@ -6,10 +6,10 @@
   "type": "module",
   "exports": {
     ".": {
-      "types": "./libs/types/configs/index.d.ts",
+      "types": "./libs/types/index.d.ts",
       "require": "./src/configs/legacy.cjs",
-      "import": "./src/configs/index.js",
-      "default": "./src/configs/index.js"
+      "import": "./src/index.js",
+      "default": "./src/index.js"
     }
   },
   "files": [
