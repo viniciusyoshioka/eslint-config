@@ -1,85 +1,70 @@
 # @vinicius1313/eslint-config
 
-This library contains the ESlint configurations I use in my projects.
-It also supports TypeScript.
+This library contains the ESLint configurations I use in my projects.
+It supports linting and formatting JavaScript and TypeScript files.
 
 ## Installation
 
-Note that this library requires `eslint`, `@stylistic/eslint-plugin`,
-`@typescript-eslint/eslint-plugin`, `@typescript-eslint/parser` and
-`typescript` to work. You can install them with:
+Note that this library requires `eslint` to work. If you use TypeScript, it is
+also required. You can install this library and its dependencies with:
 
 ```sh
-npm install -D @vinicius1313/eslint-config eslint @stylistic/eslint-plugin @typescript-eslint/eslint-plugin @typescript-eslint/parser typescript
+npm install -D eslint typescript @vinicius1313/eslint-config
 # or
-yarn add -D @vinicius1313/eslint-config eslint @stylistic/eslint-plugin @typescript-eslint/eslint-plugin @typescript-eslint/parser typescript
+yarn add -D eslint typescript @vinicius1313/eslint-config
 ```
+
+## Version compatibility
+
+| Library version   | ESLint version | ESLint Config | Previous documentation                      |
+-------------------|----------------|---------------|---------------------------------------------
+`>= 2.0.0` | `>= 9` | Flat | -
+`1.0.0` - `1.2.2` | `< 9` | Legacy | [See v1 documentation](./docs/README-v1.md)
 
 ## Usage
 
-### Updating `.eslintrc.*` file
-
-To use the library, edit you eslint config file:
-
-- `.eslintrc.js` as Module:
+Create a file called `eslint.config.mjs` at the root of your project and add the following content to it:
 
 ```js
-/** @type {import("eslint").ESLint.ConfigData} */
-export default {
-    extends: "@vinicius1313/eslint-config",
-    root: true,
-    parserOptions: {
-        tsconfigRootDir: __dirname,
-    },
-    // ...
-}
+import { configs } from "@vinicius1313/eslint-config"
+
+
+/** @type {import('eslint').Linter.Config[]} */
+export default configs.default
 ```
 
-- `.eslintrc.js` as CommonJS:
+Or, if you want to add other config:
 
 ```js
-/** @type {import("eslint").ESLint.ConfigData} */
-module.exports = {
-    extends: "@vinicius1313/eslint-config",
-    root: true,
-    parserOptions: {
-        tsconfigRootDir: __dirname,
-    },
-    // ...
-}
+import { configs } from "@vinicius1313/eslint-config"
+
+
+/** @type {import('eslint').Linter.Config[]} */
+export default [
+  ...configs.default,
+  {
+    // Custom ESLint config
+  },
+]
 ```
 
-### Updating `tsconfig.json` file
+## Configs
 
-After updating the ESLint config, change your `tsconfig.json` file to
-contain the files to be linted in the `include` field. If you haven't added,
-ESLint won't be able to lint your files.
+- `default`
 
-### Configuring to lint the files without compiling them
+    This config is the default. It includes `formatting`, `javascript` and
+    `typescript` configs.
 
-To be able to lint your code, ESLint needs your `tsconfig.json` file.
-And to do so, you also have to add the paths of the files to be linted
-in the `include` field of `tsconfig.json`.
+- `formatting`
 
-However, sometimes you have files that you just want to lint, but not compile.
-In this case, you can fix the problem creating a second TypeScript configuration
-file, just for ESLint. The [`@typescript-eslint` documentation](https://typescript-eslint.io/troubleshooting/#fixing-the-error) recommends calling
-it `tsconfig.eslint.json`.
+    This config enables formatting rules for JavaScript and TypeScript files.
 
-In `tsconfig.eslint.json`, extends the configuration from you main `tsconfig.json`
-and add all the files you want to lint in the `include` field.
+- `javascript`
 
-Then, change the `parserOptions` field of `.eslintrc.js` to:
+    This config enables linting rules for JavaScript and TypeScript files. It does not
+    lint TypeScript syntax, it lints JavaScript syntax written in TypeScript files. To
+    enable linting TypeScript syntax, use `typescript` config.
 
-```js
-/** @type {import("eslint").ESLint.ConfigData} */
-module.exports = {
-    extends: "@vinicius1313/eslint-config",
-    root: true,
-    parserOptions: {
-        project: "tsconfig.eslint.json",
-        tsconfigRootDir: __dirname,
-    },
-    // ...
-}
-```
+- `typescript`
+
+    This config enables linting rules for TypeScript syntax.
