@@ -1,6 +1,7 @@
 # @vinicius1313/eslint-config
 
-This library contains the ESLint configurations I use in my projects.
+ESLint config I use in my projects.
+
 It supports linting and formatting JavaScript and TypeScript files.
 
 ## Installation
