@@ -10,10 +10,10 @@ It supports linting and formatting JavaScript and TypeScript files.
 > This library requires `eslint`. If you use TypeScript, it is also required.
 
 > [!WARNING]
-> When using TypeScript, be aware with version compatibility!
-> It's due to `typescript-eslint`, a dependency that uses `typescript`.
-> The config may not work properly or may not work if you use a
-> incompatible version
+> When using TypeScript, be aware of version compatibility!
+> This is due to `typescript-eslint`, a dependency that uses `typescript`.
+> The configuration may not work correctly or may not work at all if you
+> use an incompatible version.
 
 ```sh
 npm install -D eslint typescript @vinicius1313/eslint-config
