@@ -22,7 +22,7 @@ yarn add -D eslint typescript @vinicius1313/eslint-config
 `>= 2.0.0` | `>= 9` | Flat | `< 5.6` | -
 `>= 1.0.0 <=1.2.2` | `< 9` | Legacy | ? | [See v1 documentation](./docs/README-v1.md)
 
-## Usage
+## Usage example
 
 Create a file called `eslint.config.mjs` at the root of your project and add the following content to it:
 
