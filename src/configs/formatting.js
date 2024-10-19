@@ -144,6 +144,10 @@ export const formattingConfig = [
     },
     languageOptions: {
       parser: tslint.parser,
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: import.meta.dirname,
+      },
     },
     rules: {
       "@typescript-eslint/adjacent-overload-signatures": "warn",
