@@ -2,10 +2,9 @@
     "compilerOptions": {
         "rootDir": "src",
         "outDir": "libs",
-        "module": "Node16",
-        "moduleResolution": "Node16",
+        "module": "ESNext",
         "lib": [
-            "ES2016",
+            "ESNext",
         ],
         "strict": true,
         "allowJs": true,
