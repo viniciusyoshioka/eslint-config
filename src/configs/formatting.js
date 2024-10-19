@@ -146,7 +146,6 @@ export const formattingConfig = [
       parser: tslint.parser,
       parserOptions: {
         projectService: true,
-        tsconfigRootDir: import.meta.dirname,
       },
     },
     rules: {
