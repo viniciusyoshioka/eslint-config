@@ -1,3 +1,6 @@
+import tslint from "typescript-eslint"
+
+
 export const alwaysIgnorePaths = [
   "**/node_modules/**",
   "**/build/**",
@@ -19,3 +22,17 @@ export const tsFileAnyPath = [
   "**/*.mts",
   "**/*.tsx",
 ]
+
+
+/** @type {import("eslint").Linter.Config} */
+export const typescriptSupportConfig = {
+  plugins: {
+    "@typescript-eslint": tslint.plugin,
+  },
+  languageOptions: {
+    parser: tslint.parser,
+    parserOptions: {
+      projectService: true,
+    },
+  },
+}
