@@ -150,6 +150,67 @@ export const formattingConfig = [
     },
     rules: {
       "@typescript-eslint/adjacent-overload-signatures": "warn",
+      "@typescript-eslint/array-type": ["warn", {
+        default: "array",
+      }],
+      "@typescript-eslint/ban-tslint-comment": "off",
+      "@typescript-eslint/class-literal-property-style": "off",
+      "@typescript-eslint/consistent-generic-constructors": ["warn", "constructor"],
+      "@typescript-eslint/consistent-indexed-object-style": "off",
+      "@typescript-eslint/consistent-type-assertions": ["warn", {
+        assertionStyle: "as",
+        objectLiteralTypeAssertions: "allow",
+      }],
+      "@typescript-eslint/consistent-type-definitions": "off",
+      "dot-notation": "off",
+      "@typescript-eslint/dot-notation": ["warn", {
+        // eslint options
+        allowKeywords: true,
+        allowPattern: "^([a-zA-Z_]+[a-zA-Z0-9_]*)?(_[a-zA-Z0-9_]*)$",
+
+        // typescript-eslint options
+        allowPrivateClassPropertyAccess: false,
+        allowProtectedClassPropertyAccess: false,
+        allowIndexSignaturePropertyAccess: false,
+      }],
+      "@typescript-eslint/no-confusing-non-null-assertion": "error",
+      "no-empty-function": "off",
+      "@typescript-eslint/no-empty-function": "off",
+      "@typescript-eslint/no-inferrable-types": ["warn", {
+        ignoreParameters: false,
+        ignoreProperties: false,
+      }],
+      "@typescript-eslint/non-nullable-type-assertion-style": "warn",
+      "@typescript-eslint/prefer-find": "warn",
+      "@typescript-eslint/prefer-for-of": "warn",
+      "@typescript-eslint/prefer-function-type": "warn",
+      "@typescript-eslint/prefer-includes": "warn",
+      "@typescript-eslint/prefer-nullish-coalescing": ["warn", {
+        allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing: false,
+        ignoreConditionalTests: true,
+        ignoreMixedLogicalExpressions: false,
+        ignorePrimitives: {
+          number: false,
+          string: false,
+          boolean: false,
+          bigint: false,
+        },
+        ignoreTernaryTests: false,
+      }],
+      "@typescript-eslint/prefer-optional-chain": ["warn", {
+        allowPotentiallyUnsafeFixesThatModifyTheReturnTypeIKnowWhatImDoing: false,
+        checkAny: true,
+        checkUnknown: true,
+        checkBigInt: true,
+        checkBoolean: true,
+        checkNumber: true,
+        checkString: true,
+        requireNullish: false,
+      }],
+      "@typescript-eslint/prefer-regexp-exec": "warn",
+      "@typescript-eslint/prefer-string-starts-ends-with": ["warn", {
+        allowSingleElementEquality: "never",
+      }],
     },
   },
 ]
