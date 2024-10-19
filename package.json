@@ -42,7 +42,7 @@
     "formatting"
   ],
   "scripts": {
-    "build": "yarn tsc",
+    "build": "yarn tsc -b ./tsconfig.build.json",
     "lint": "yarn eslint"
   },
   "peerDependencies": {
