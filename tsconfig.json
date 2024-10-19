@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "rootDir": "src",
+        "rootDir": ".",
         "outDir": "libs",
         "module": "ESNext",
         "lib": [
@@ -15,7 +15,9 @@
         "skipLibCheck": true,
     },
     "include": [
-        "src",
+        "src/**/*",
+        "tests/**/*",
+        "eslint.config.js",
     ],
     "exclude": [
         "node_modules",
