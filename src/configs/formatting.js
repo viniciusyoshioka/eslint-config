@@ -15,11 +15,11 @@ stylisticRecommended.rules = convertAllRulesToWarn(stylisticRecommended.rules ??
 
 /** @type {import("eslint").Linter.Config[]} */
 export const formattingConfig = [
-  stylisticRecommended,
-  stylistic.configs["disable-legacy"],
   {
     ignores: alwaysIgnorePaths,
   },
+
+  stylisticRecommended,
   {
     name: "formatting",
     files: [
@@ -141,6 +141,8 @@ export const formattingConfig = [
       "@stylistic/yield-star-spacing": ["warn", "before"],
     },
   },
+  stylistic.configs["disable-legacy"],
+
   typescriptSupportConfig,
   {
     name: "typescript_formatting",
