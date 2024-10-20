@@ -1,6 +1,11 @@
 import tslint from "typescript-eslint"
 
-import { alwaysIgnorePaths, jsFileAnyPath, tsFileAnyPath } from "../constants.js"
+import {
+  alwaysIgnorePaths,
+  jsFileAnyPath,
+  tsFileAnyPath,
+  typescriptSupportConfig,
+} from "../constants.js"
 
 
 /** @type {import("eslint").Linter.Config[]} */
@@ -10,20 +15,11 @@ export const typescriptConfig = [
   },
 
   ...tslint.configs.recommended,
+  typescriptSupportConfig,
   {
     name: "typescript_lint",
     files: tsFileAnyPath,
     ignores: jsFileAnyPath,
-    plugins: {
-      "@typescript-eslint": tslint.plugin,
-    },
-    languageOptions: {
-      parser: tslint.parser,
-      parserOptions: {
-        projectService: true,
-        tsconfigRootDir: import.meta.dirname,
-      },
-    },
     rules: {
       "consistent-return": "off",
       "@typescript-eslint/consistent-return": "error",
