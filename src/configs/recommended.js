@@ -4,7 +4,7 @@ import { typescriptConfig } from "./typescript.js"
 
 
 /** @type {import("eslint").Linter.Config[]} */
-export const defaultConfig = [
+export const recommendedConfig = [
   ...formattingConfig,
   ...javascriptConfig,
   ...typescriptConfig,
