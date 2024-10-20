@@ -8,6 +8,10 @@ import {
 } from "../constants.js"
 
 
+const INDENT = 2
+const MAX_LINE_LENGTH = 90
+
+
 /** @type {import("eslint").Linter.Config[]} */
 export const formattingConfig = [
   {
@@ -23,47 +27,166 @@ export const formattingConfig = [
     plugins: stylistic.configs["recommended-flat"].plugins,
     rules: {
       "@stylistic/array-bracket-newline": ["warn", "consistent"],
-      "@stylistic/arrow-parens": ["warn", "as-needed"],
-      "@stylistic/brace-style": ["warn", "1tbs"],
+      "@stylistic/array-bracket-spacing": ["warn", "never"],
+      "@stylistic/array-element-newline": ["warn", "consistent"],
+      "@stylistic/arrow-parens": ["warn", "as-needed", {
+        requireForBlockBody: true,
+      }],
+      "@stylistic/arrow-spacing": ["warn", {
+        before: true,
+        after: true,
+      }],
+      "@stylistic/block-spacing": ["warn", "always"],
+      "@stylistic/brace-style": ["warn", "1tbs", {
+        allowSingleLine: true,
+      }],
+      "@stylistic/comma-dangle": ["warn", "always-multiline"],
+      "@stylistic/comma-spacing": ["warn", {
+        before: false,
+        after: true,
+      }],
+      "@stylistic/comma-style": ["warn", "last"],
+      "@stylistic/computed-property-spacing": ["warn", "never", {
+        enforceForClassMembers: true,
+      }],
+      "@stylistic/curly-newline": ["off", {
+        consistent: true,
+      }],
       "@stylistic/dot-location": ["warn", "property"],
+      "@stylistic/eol-last": ["warn", "always"],
       "@stylistic/function-call-spacing": ["warn", "never"],
+      "@stylistic/function-call-argument-newline": ["warn", "consistent"],
       "@stylistic/function-paren-newline": ["warn", "multiline-arguments"],
       "@stylistic/generator-star-spacing": ["warn", {
         before: true,
         after: false,
       }],
       "@stylistic/implicit-arrow-linebreak": ["warn", "beside"],
-      "@stylistic/indent": ["warn", 2, {
-        SwitchCase: 1,
+      "@stylistic/indent": ["warn", INDENT, {
+        ArrayExpression: 1,
+        CallExpression: {
+          arguments: 1,
+        },
+        flatTernaryExpressions: false,
+        FunctionDeclaration: {
+          body: 1,
+          parameters: 1,
+        },
+        FunctionExpression: {
+          body: 1,
+          parameters: 1,
+        },
+        ignoreComments: false,
         ignoredNodes: [
           "FunctionExpression > .params[decorators.length > 0]",
           "FunctionExpression > .params > :matches(Decorator, :not(:first-child))",
           "ClassBody.body > PropertyDefinition[decorators.length > 0] > .key",
         ],
+        ImportDeclaration: 1,
+        MemberExpression: 1,
+        ObjectExpression: 1,
+        offsetTernaryExpressions: true,
+        outerIIFEBody: 1,
+        SwitchCase: 1,
+        tabLength: INDENT,
+        VariableDeclarator: "first",
       }],
-      "@stylistic/indent-binary-ops": ["warn", 2],
+      "@stylistic/indent-binary-ops": ["warn", INDENT],
+      "@stylistic/jsx-child-element-spacing": "off",
+      "@stylistic/jsx-closing-bracket-location": ["warn", "tag-aligned"],
+      "@stylistic/jsx-closing-tag-location": ["warn", "tag-aligned"],
       "@stylistic/jsx-curly-brace-presence": ["warn", {
         props: "always",
         children: "ignore",
         propElementValues: "always",
       }],
+      "@stylistic/jsx-curly-newline": ["warn", {
+        singleline: "consistent",
+        multiline: "consistent",
+      }],
+      "@stylistic/jsx-curly-spacing": ["warn", {
+        when: "never",
+      }],
+      "@stylistic/jsx-equals-spacing": ["warn", "never"],
+      "@stylistic/jsx-first-prop-new-line": ["warn", "multiline-multiprop"],
+      "@stylistic/jsx-function-call-newline": ["warn", "multiline"],
       "@stylistic/jsx-indent": ["warn", 2, {
         checkAttributes: true,
         indentLogicalExpressions: true,
       }],
-      "@stylistic/jsx-indent-props": ["warn", 2],
+      "@stylistic/jsx-indent-props": ["warn", INDENT],
+      "@stylistic/jsx-max-props-per-line": ["warn", {
+        maximum: 3,
+        when: "always",
+      }],
+      "@stylistic/jsx-newline": ["warn", {
+        prevent: false,
+        allowMultilines: false,
+      }],
+      "@stylistic/jsx-one-expression-per-line": ["off", {
+        allow: "none",
+      }],
+      "@stylistic/jsx-pascal-case": "off",
+      "@stylistic/jsx-props-no-multi-spaces": "warn",
       "@stylistic/jsx-quotes": ["warn", "prefer-double"],
       "@stylistic/jsx-self-closing-comp": ["warn", {
         component: true,
         html: true,
       }],
+      "@stylistic/jsx-sort-props": "off",
+      "@stylistic/jsx-tag-spacing": ["warn", {
+        closingSlash: "never",
+        beforeSelfClosing: "always",
+        afterOpening: "never",
+        beforeClosing: "never",
+      }],
+      "@stylistic/jsx-wrap-multilines": ["warn", {
+        arrow: "parens",
+        // assignment: "parens",
+        condition: "parens",
+        // declaration: "parens",
+        logical: "parens",
+        prop: "parens",
+        propertyValue: "parens",
+        return: "parens",
+      }],
+      "@stylistic/key-spacing": ["warn", {
+        beforeColon: false,
+        afterColon: true,
+      }],
+      "@stylistic/keyword-spacing": ["warn", {
+        before: true,
+        after: true,
+      }],
+      "@stylistic/line-comment-position": ["warn", {
+        position: "above",
+      }],
+      "@stylistic/linebreak-style": ["warn", "unix"],
+      "@stylistic/lines-around-comment": ["warn", {
+        beforeBlockComment: true,
+      }],
+      "@stylistic/lines-between-class-members": ["warn", {
+        enforce: [
+          { blankLine: "always", prev: "field", next: "method" },
+          { blankLine: "always", prev: "method", next: "field" },
+          { blankLine: "never", prev: "field", next: "field" },
+          { blankLine: "always", prev: "method", next: "method" },
+        ],
+      }],
       "@stylistic/max-len": ["warn", {
-        code: 90,
-        comments: 90,
-        ignorePattern: "^\\s*var\\s.+=\\s*require\\s*\\(",
-        ignoreRegExpLiterals: true,
-        ignoreTemplateLiterals: true,
+        code: MAX_LINE_LENGTH,
+        tabWidth: INDENT,
+        comments: MAX_LINE_LENGTH,
+        // ignorePattern: "",
+        ignoreComments: false,
+        ignoreTrailingComments: false,
         ignoreUrls: true,
+        ignoreStrings: false,
+        ignoreTemplateLiterals: false,
+        ignoreRegExpLiterals: true,
+      }],
+      "@stylistic/max-statements-per-line": ["error", {
+        max: 1,
       }],
       "@stylistic/member-delimiter-style": ["warn", {
         singleline: {
@@ -76,6 +199,8 @@ export const formattingConfig = [
         },
         multilineDetection: "brackets",
       }],
+      "@stylistic/multiline-comment-style": ["off", "starred-block"],
+      "@stylistic/multiline-ternary": ["warn", "always-multiline"],
       "@stylistic/new-parens": ["warn", "always"],
       "@stylistic/newline-per-chained-call": ["warn", {
         ignoreChainWithDepth: 2,
@@ -84,6 +209,19 @@ export const formattingConfig = [
         allowParens: true,
         onlyOneSimpleParam: true,
       }],
+      "@stylistic/no-extra-parens": ["warn", "all", {
+        // allowParensAfterCommentPattern: "any-string-pattern",
+        // conditionalAssign: false,
+        // enforceForArrowConditionals: false,
+        // enforceForFunctionPrototypeMethods: false,
+        // enforceForNewInMemberExpressions: false,
+        // enforceForSequenceExpressions: false,
+        // ignoreJSX: "none",
+        nestedBinaryExpressions: false,
+        // returnAssign: false,
+        // ternaryOperandBinaryExpressions: false,
+      }],
+      "@stylistic/no-extra-semi": "warn",
       "@stylistic/no-floating-decimal": "warn",
       "@stylistic/no-mixed-operators": ["warn", {
         groups: [
@@ -96,23 +234,63 @@ export const formattingConfig = [
         allowSamePrecedence: true,
       }],
       "@stylistic/no-mixed-spaces-and-tabs": "warn",
+      "@stylistic/no-multi-spaces": ["warn", {
+        ignoreEOLComments: false,
+        exceptions: {
+          Property: true,
+        },
+        includeTabs: true,
+      }],
       "@stylistic/no-multiple-empty-lines": ["warn", {
         max: 2,
         maxBOF: 1,
         maxEOF: 0,
       }],
+      "@stylistic/no-tabs": "warn",
+      "@stylistic/no-trailing-spaces": ["warn", {
+        skipBlankLines: false,
+        ignoreComments: false,
+      }],
+      "@stylistic/no-whitespace-before-property": "warn",
+      "@stylistic/nonblock-statement-body-position": ["warn", "any"],
+      "@stylistic/object-curly-newline": ["warn", {
+        consistent: true,
+      }],
+      "@stylistic/object-curly-spacing": ["warn", "always"],
+      "@stylistic/object-property-newline": "off",
+      "@stylistic/one-var-declaration-per-line": ["warn", "initializations"],
       "@stylistic/operator-linebreak": ["warn", "before", {
         overrides: {
           "=": "after",
         },
       }],
       "@stylistic/padded-blocks": "off",
+      "@stylistic/padding-line-between-statements": "off",
+      "@stylistic/quote-props": ["warn", "as-needed"],
       "@stylistic/quotes": ["warn", "double", {
         avoidEscape: true,
         allowTemplateLiterals: true,
       }],
+      "@stylistic/rest-spread-spacing": ["warn", "never"],
       "@stylistic/semi": ["warn", "never", {
         beforeStatementContinuationChars: "never",
+      }],
+      "@stylistic/semi-spacing": ["warn", {
+        before: false,
+        after: true,
+      }],
+      "@stylistic/semi-style": ["warn", "last"],
+      "@stylistic/space-before-blocks": ["warn", "always"],
+      "@stylistic/space-before-function-paren": ["warn", {
+        anonymous: "never",
+        asyncArrow: "always",
+        named: "never",
+      }],
+      "@stylistic/space-in-parens": ["warn", "never"],
+      "@stylistic/space-infix-ops": "warn",
+      "@stylistic/space-unary-ops": ["warn", {
+        words: true,
+        nonwords: false,
       }],
       "@stylistic/spaced-comment": ["warn", "always", {
         block: {
@@ -129,6 +307,14 @@ export const formattingConfig = [
         before: false,
         after: true,
       }],
+      "@stylistic/template-curly-spacing": ["warn", "never"],
+      "@stylistic/template-tag-spacing": ["warn", "never"],
+      "@stylistic/type-annotation-spacing": ["warn", {
+        before: false,
+        after: true,
+      }],
+      "@stylistic/type-generic-spacing": "warn",
+      "@stylistic/type-named-tuple-spacing": "warn",
       "@stylistic/wrap-iife": ["warn", "inside", {
         functionPrototypeMethods: true,
       }],
