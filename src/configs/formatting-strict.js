@@ -5,6 +5,9 @@ import { formattingConfig } from "./formatting.js"
 export const formattingStrictConfig = [
   ...formattingConfig,
   {
+    name: "formatting_strict",
+  },
+  {
     name: "typescript_formatting_strict",
     rules: {
       "@typescript-eslint/class-literal-property-style": ["warn", "fields"],
