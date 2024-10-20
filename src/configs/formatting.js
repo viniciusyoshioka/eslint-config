@@ -144,6 +144,7 @@ export const formattingConfig = [
   typescriptSupportConfig,
   {
     name: "typescript_formatting",
+    files: tsFileAnyPath,
     rules: {
       "@typescript-eslint/adjacent-overload-signatures": "warn",
       "@typescript-eslint/array-type": ["warn", {
