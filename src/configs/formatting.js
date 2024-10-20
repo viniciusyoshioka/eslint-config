@@ -6,11 +6,6 @@ import {
   tsFileAnyPath,
   typescriptSupportConfig,
 } from "../constants.js"
-import { convertAllRulesToWarn } from "../utils/convertAllRulesToWarn.js"
-
-
-const stylisticRecommended = stylistic.configs["recommended-flat"]
-stylisticRecommended.rules = convertAllRulesToWarn(stylisticRecommended.rules ?? {})
 
 
 /** @type {import("eslint").Linter.Config[]} */
@@ -19,13 +14,13 @@ export const formattingConfig = [
     ignores: alwaysIgnorePaths,
   },
 
-  stylisticRecommended,
   {
     name: "formatting",
     files: [
       ...jsFileAnyPath,
       ...tsFileAnyPath,
     ],
+    plugins: stylistic.configs["recommended-flat"].plugins,
     rules: {
       "@stylistic/array-bracket-newline": ["warn", "consistent"],
       "@stylistic/arrow-parens": ["warn", "as-needed"],
