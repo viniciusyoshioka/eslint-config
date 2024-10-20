@@ -6,10 +6,11 @@ import { alwaysIgnorePaths, jsFileAnyPath, tsFileAnyPath } from "../constants.js
 
 /** @type {import("eslint").Linter.Config[]} */
 export const javascriptConfig = [
-  eslint.configs.recommended,
   {
     ignores: alwaysIgnorePaths,
   },
+
+  eslint.configs.recommended,
   {
     name: "javascript_lint",
     files: [
