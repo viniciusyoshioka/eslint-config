@@ -5,10 +5,11 @@ import { alwaysIgnorePaths, jsFileAnyPath, tsFileAnyPath } from "../constants.js
 
 /** @type {import("eslint").Linter.Config[]} */
 export const typescriptConfig = [
-  ...tslint.configs.recommended,
   {
     ignores: alwaysIgnorePaths,
   },
+
+  ...tslint.configs.recommended,
   {
     name: "typescript_lint",
     files: tsFileAnyPath,
