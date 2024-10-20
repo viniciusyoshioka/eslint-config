@@ -2,7 +2,7 @@
     "compilerOptions": {
         "rootDir": ".",
         "outDir": "libs",
-        "module": "ESNext",
+        "module": "Node16",
         "lib": [
             "ESNext",
         ],
