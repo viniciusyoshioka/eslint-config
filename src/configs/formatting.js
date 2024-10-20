@@ -1,7 +1,11 @@
 import stylistic from "@stylistic/eslint-plugin"
-import tslint from "typescript-eslint"
 
-import { alwaysIgnorePaths, jsFileAnyPath, tsFileAnyPath } from "../constants.js"
+import {
+  alwaysIgnorePaths,
+  jsFileAnyPath,
+  tsFileAnyPath,
+  typescriptSupportConfig,
+} from "../constants.js"
 import { convertAllRulesToWarn } from "../utils/convertAllRulesToWarn.js"
 
 
@@ -137,17 +141,9 @@ export const formattingConfig = [
       "@stylistic/yield-star-spacing": ["warn", "before"],
     },
   },
+  typescriptSupportConfig,
   {
     name: "typescript_formatting",
-    plugins: {
-      "@typescript-eslint": tslint.plugin,
-    },
-    languageOptions: {
-      parser: tslint.parser,
-      parserOptions: {
-        projectService: true,
-      },
-    },
     rules: {
       "@typescript-eslint/adjacent-overload-signatures": "warn",
       "@typescript-eslint/array-type": ["warn", {
