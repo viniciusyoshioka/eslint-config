@@ -37,7 +37,16 @@ import { configs } from "@vinicius1313/eslint-config"
 
 
 /** @type {import('eslint').Linter.Config[]} */
-export default configs.default
+export default [
+  ...configs.default,
+  {
+    languageOptions: {
+      parserOptions: {
+        tsconfigRootDir: ".",
+      },
+    },
+  },
+]
 ```
 
 Or, if you want to add other config:
@@ -49,6 +58,13 @@ import { configs } from "@vinicius1313/eslint-config"
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   ...configs.default,
+  {
+    languageOptions: {
+      parserOptions: {
+        tsconfigRootDir: ".",
+      },
+    },
+  },
   {
     // Custom ESLint config
   },
