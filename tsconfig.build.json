@@ -10,6 +10,10 @@
         "skipLibCheck": true,
     },
     "include": [
-        "src/**/*",
+        "src",
+    ],
+    "exclude": [
+        "tests",
+        "eslint.config.js",
     ],
 }
