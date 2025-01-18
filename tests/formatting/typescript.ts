@@ -226,6 +226,18 @@ class ClassLiteralPropertyStyle {
 }
 
 
+// @typescript-eslint/no-empty-function
+// function emptyFunction() {}
+// const emptyAnonymousFunction = function () {}
+// const emptyArrowFunction = () => {}
+// function *emptyGeneratorFunction() {}
+
+
+// async function emptyAsyncFunction() {}
+// const emptyAsyncAnonymousFunction = async function () {}
+// const emptyAsyncArrowFunction = async () => {}
+
+
 // @typescript-eslint/consistent-generic-constructors
 const set1 = new Set()
 const set2 = new Set<string>()
