@@ -2,7 +2,7 @@ import { configs } from "./src/index.js"
 
 
 export default [
-  ...configs.recommendedConfig,
+  ...configs.recommended,
   {
     languageOptions: {
       parserOptions: {
