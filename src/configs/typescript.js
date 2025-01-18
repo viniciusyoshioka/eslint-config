@@ -18,8 +18,10 @@ export const typescriptConfig = [
   typescriptSupportConfig,
   {
     name: 'typescript_lint',
-    files: tsFileAnyPath,
-    ignores: jsFileAnyPath,
+    files: [
+      ...jsFileAnyPath,
+      ...tsFileAnyPath,
+    ],
     rules: {
       '@typescript-eslint/await-thenable': 'warn',
       'class-methods-use-this': 'off',
