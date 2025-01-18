@@ -355,7 +355,17 @@ export const formattingConfig = [
       }],
       "@typescript-eslint/no-confusing-non-null-assertion": "error",
       "no-empty-function": "off",
-      "@typescript-eslint/no-empty-function": "off",
+      "@typescript-eslint/no-empty-function": ["warn", {
+        allow: [
+          // eslint options
+          "constructors",
+
+          // typescript-eslint options
+          "private-constructors",
+          "protected-constructors",
+          "overrideMethods",
+        ],
+      }],
       "@typescript-eslint/no-inferrable-types": ["warn", {
         ignoreParameters: false,
         ignoreProperties: false,
