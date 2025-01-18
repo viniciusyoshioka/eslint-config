@@ -1,4 +1,4 @@
-import { configs } from "./src/index.js"
+import { configs } from './src/index.js'
 
 
 /** @type {import("eslint").Linter.Config[]} */
@@ -7,7 +7,7 @@ export default [
   {
     languageOptions: {
       parserOptions: {
-        tsconfigRootDir: ".",
+        tsconfigRootDir: '.',
       },
     },
   },

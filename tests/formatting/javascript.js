@@ -101,21 +101,21 @@ if (foo) {
 
 // @stylistic/comma-dangle
 // object = {
-//   foo: "foo",
-//   bar: "bar"
+//   foo: 'foo',
+//   bar: 'bar'
 // }
 
 object = {
-  foo: "foo",
-  bar: "bar",
+  foo: 'foo',
+  bar: 'bar',
 }
 
 
 // @stylistic/comma-spacing
 // array = [0 ,1 ,2]
-// foo = "foo" ,bar = "bar"
+// foo = 'foo' ,bar = 'bar'
 array = [0, 1, 2]
-foo = "foo", bar = "bar"
+foo = 'foo', bar = 'bar'
 
 
 // @stylistic/comma-style
@@ -129,11 +129,11 @@ array = [
   1,
 ]
 
-// var newFoo = "foo"
-//     ,newBar = "bar"
+// var newFoo = 'foo'
+//     ,newBar = 'bar'
 
-var newFoo = "foo",
-    newBar = "bar"
+var newFoo = 'foo',
+    newBar = 'bar'
 
 
 // @stylistic/computed-property-spacing

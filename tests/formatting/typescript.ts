@@ -8,7 +8,7 @@ import {
   useReducer,
   useRef,
   useState,
-} from "react"
+} from 'react'
 
 
 const SomeContext = createContext({ a: 1, b: 2, c: 3 })
@@ -35,13 +35,14 @@ function Component() {
  * Keep this `export` to avoid duplicate identifier errors,
  * even if nothing is exported and used in other files.
  */
+// eslint-disable-next-line @typescript-eslint/no-useless-empty-export
 export { }
 
 
 // @stylistic/indent
 
 // ArrayExpression
-let newArray = [
+const newArray = [
   0,
   1,
   2,
@@ -71,8 +72,8 @@ localFunction(
 
 // flatTernaryExpressions
 {
-  let condition1 = true
-  let condition2 = true
+  const condition1 = true
+  const condition2 = true
   condition1
     ? 1
     : condition2
@@ -91,7 +92,7 @@ function functionDeclaration(
 }
 
 // FunctionExpression
-let functionExpression = function(
+const functionExpression = function(
   a: number,
   b: number,
   c: number,
@@ -101,7 +102,7 @@ let functionExpression = function(
 }
 
 // ignoreComments
-let functionWithIndent = () => {
+const functionWithIndent = () => {
   // Comment
   function localFunction() {}
 
@@ -122,15 +123,15 @@ newArray
   .concat(newArray)
 
 // ObjectExpression
-let newObject = {
+const newObject = {
   a: 1,
   b: 2,
   c: 3,
 }
 
 // offsetTernaryExpressions
-let condition1 = true
-let condition2 = true
+const condition1 = true
+const condition2 = true
 
 // condition1
 //   ? () => (
@@ -144,16 +145,16 @@ let condition2 = true
 //       "a < b"
 //     )
 
-let r = condition1
+const r = condition1
   ? () => {
-      return "a === b"
+      return 'a === b'
     }
   : condition2
     ? () => {
-        return "a > b"
+        return 'a > b'
       }
     : () => {
-        return "a < b"
+        return 'a < b'
       }
 
 
@@ -168,7 +169,7 @@ let r = condition1
 
 
 // SwitchCase
-let someVariable = 1
+const someVariable = 1
 switch (someVariable) {
   case 1:
     break
@@ -182,8 +183,8 @@ switch (someVariable) {
 // Cannot be tested when indent is set to 2 spaces
 
 // VariableDeclarator
-var var1, var2, var3
-var var4,
+let var1, var2, var3
+let var4,
     var5,
     var6
 
@@ -268,7 +269,7 @@ const fooWithDeclaration: FooType = {
 
 const fooWithAsAssertion = {
   foo: 1,
-  extra: "bar",
+  extra: 'bar',
 } as FooType
 
 
@@ -283,7 +284,7 @@ barFunction({
 
 barFunction({
   foo: 1,
-  extra: "bar",
+  extra: 'bar',
 } as FooType)
 
 
@@ -305,19 +306,19 @@ const test = new ClassDotNotation()
 test.interface
 test.property
 test.snake_case_property
-test["snake_case_property"]
+test['snake_case_property']
 
 test.class()
 test.method()
 test.snake_case_method()
-test["snake_case_method"]()
+test['snake_case_method']()
 
 
 // @typescript-eslint/no-confusing-non-null-assertion
 // const isEqualsBar = foo.bar! == 1
 // const isEqualsNum = 1 + foo.bar! == 2
-const isEqualsBar = (foo.bar!) == 1
-const isEqualsNum = (1 + foo.bar!) == 2
+const isEqualsBar = foo.bar == 1
+const isEqualsNum = (1 + foo.bar) == 2
 
 
 // @typescript-eslint/no-empty-function
@@ -396,7 +397,7 @@ class ClassNoInferrableTypes {
 
 
 // @typescript-eslint/non-nullable-type-assertion-style
-const maybe: string | undefined = Math.random() > 0.5 ? "string" : undefined
+const maybe: string | undefined = Math.random() > 0.5 ? 'string' : undefined
 // const definitely = maybe as string
 // const alsoDefinitely = maybe as string
 const definitely = maybe!

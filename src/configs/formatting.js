@@ -1,11 +1,11 @@
-import stylistic from "@stylistic/eslint-plugin"
+import stylistic from '@stylistic/eslint-plugin'
 
 import {
   alwaysIgnorePaths,
   jsFileAnyPath,
   tsFileAnyPath,
   typescriptSupportConfig,
-} from "../constants.js"
+} from '../constants.js'
 
 
 const INDENT = 2
@@ -19,50 +19,50 @@ export const formattingConfig = [
   },
 
   {
-    name: "formatting",
+    name: 'formatting',
     files: [
       ...jsFileAnyPath,
       ...tsFileAnyPath,
     ],
-    plugins: stylistic.configs["recommended-flat"].plugins,
+    plugins: stylistic.configs['recommended-flat'].plugins,
     rules: {
-      "@stylistic/array-bracket-newline": ["warn", "consistent"],
-      "@stylistic/array-bracket-spacing": ["warn", "never"],
-      "@stylistic/array-element-newline": ["warn", "consistent"],
-      "@stylistic/arrow-parens": ["warn", "as-needed", {
+      '@stylistic/array-bracket-newline': ['warn', 'consistent'],
+      '@stylistic/array-bracket-spacing': ['warn', 'never'],
+      '@stylistic/array-element-newline': ['warn', 'consistent'],
+      '@stylistic/arrow-parens': ['warn', 'as-needed', {
         requireForBlockBody: true,
       }],
-      "@stylistic/arrow-spacing": ["warn", {
+      '@stylistic/arrow-spacing': ['warn', {
         before: true,
         after: true,
       }],
-      "@stylistic/block-spacing": ["warn", "always"],
-      "@stylistic/brace-style": ["warn", "1tbs", {
+      '@stylistic/block-spacing': ['warn', 'always'],
+      '@stylistic/brace-style': ['warn', '1tbs', {
         allowSingleLine: true,
       }],
-      "@stylistic/comma-dangle": ["warn", "always-multiline"],
-      "@stylistic/comma-spacing": ["warn", {
+      '@stylistic/comma-dangle': ['warn', 'always-multiline'],
+      '@stylistic/comma-spacing': ['warn', {
         before: false,
         after: true,
       }],
-      "@stylistic/comma-style": ["warn", "last"],
-      "@stylistic/computed-property-spacing": ["warn", "never", {
+      '@stylistic/comma-style': ['warn', 'last'],
+      '@stylistic/computed-property-spacing': ['warn', 'never', {
         enforceForClassMembers: true,
       }],
-      "@stylistic/curly-newline": ["off", {
+      '@stylistic/curly-newline': ['off', {
         consistent: true,
       }],
-      "@stylistic/dot-location": ["warn", "property"],
-      "@stylistic/eol-last": ["warn", "always"],
-      "@stylistic/function-call-spacing": ["warn", "never"],
-      "@stylistic/function-call-argument-newline": ["warn", "consistent"],
-      "@stylistic/function-paren-newline": ["warn", "multiline-arguments"],
-      "@stylistic/generator-star-spacing": ["warn", {
+      '@stylistic/dot-location': ['warn', 'property'],
+      '@stylistic/eol-last': ['warn', 'always'],
+      '@stylistic/function-call-spacing': ['warn', 'never'],
+      '@stylistic/function-call-argument-newline': ['warn', 'consistent'],
+      '@stylistic/function-paren-newline': ['warn', 'multiline-arguments'],
+      '@stylistic/generator-star-spacing': ['warn', {
         before: true,
         after: false,
       }],
-      "@stylistic/implicit-arrow-linebreak": ["warn", "beside"],
-      "@stylistic/indent": ["warn", INDENT, {
+      '@stylistic/implicit-arrow-linebreak': ['warn', 'beside'],
+      '@stylistic/indent': ['warn', INDENT, {
         ArrayExpression: 1,
         CallExpression: {
           arguments: 1,
@@ -78,9 +78,9 @@ export const formattingConfig = [
         },
         ignoreComments: false,
         ignoredNodes: [
-          "FunctionExpression > .params[decorators.length > 0]",
-          "FunctionExpression > .params > :matches(Decorator, :not(:first-child))",
-          "ClassBody.body > PropertyDefinition[decorators.length > 0] > .key",
+          'FunctionExpression > .params[decorators.length > 0]',
+          'FunctionExpression > .params > :matches(Decorator, :not(:first-child))',
+          'ClassBody.body > PropertyDefinition[decorators.length > 0] > .key',
         ],
         ImportDeclaration: 1,
         MemberExpression: 1,
@@ -89,91 +89,91 @@ export const formattingConfig = [
         outerIIFEBody: 1,
         SwitchCase: 1,
         tabLength: INDENT,
-        VariableDeclarator: "first",
+        VariableDeclarator: 'first',
       }],
-      "@stylistic/indent-binary-ops": ["warn", INDENT],
-      "@stylistic/jsx-child-element-spacing": "off",
-      "@stylistic/jsx-closing-bracket-location": ["warn", "tag-aligned"],
-      "@stylistic/jsx-closing-tag-location": ["warn", "tag-aligned"],
-      "@stylistic/jsx-curly-brace-presence": ["warn", {
-        props: "always",
-        children: "ignore",
-        propElementValues: "always",
+      '@stylistic/indent-binary-ops': ['warn', INDENT],
+      '@stylistic/jsx-child-element-spacing': 'off',
+      '@stylistic/jsx-closing-bracket-location': ['warn', 'tag-aligned'],
+      '@stylistic/jsx-closing-tag-location': ['warn', 'tag-aligned'],
+      '@stylistic/jsx-curly-brace-presence': ['warn', {
+        props: 'always',
+        children: 'ignore',
+        propElementValues: 'always',
       }],
-      "@stylistic/jsx-curly-newline": ["warn", {
-        singleline: "consistent",
-        multiline: "consistent",
+      '@stylistic/jsx-curly-newline': ['warn', {
+        singleline: 'consistent',
+        multiline: 'consistent',
       }],
-      "@stylistic/jsx-curly-spacing": ["warn", {
-        when: "never",
+      '@stylistic/jsx-curly-spacing': ['warn', {
+        when: 'never',
       }],
-      "@stylistic/jsx-equals-spacing": ["warn", "never"],
-      "@stylistic/jsx-first-prop-new-line": ["warn", "multiline-multiprop"],
-      "@stylistic/jsx-function-call-newline": ["warn", "multiline"],
-      "@stylistic/jsx-indent": ["warn", 2, {
+      '@stylistic/jsx-equals-spacing': ['warn', 'never'],
+      '@stylistic/jsx-first-prop-new-line': ['warn', 'multiline-multiprop'],
+      '@stylistic/jsx-function-call-newline': ['warn', 'multiline'],
+      '@stylistic/jsx-indent': ['warn', 2, {
         checkAttributes: true,
         indentLogicalExpressions: true,
       }],
-      "@stylistic/jsx-indent-props": ["warn", INDENT],
-      "@stylistic/jsx-max-props-per-line": ["warn", {
+      '@stylistic/jsx-indent-props': ['warn', INDENT],
+      '@stylistic/jsx-max-props-per-line': ['warn', {
         maximum: 3,
-        when: "always",
+        when: 'always',
       }],
-      "@stylistic/jsx-newline": ["warn", {
+      '@stylistic/jsx-newline': ['warn', {
         prevent: false,
         allowMultilines: false,
       }],
-      "@stylistic/jsx-one-expression-per-line": ["off", {
-        allow: "none",
+      '@stylistic/jsx-one-expression-per-line': ['off', {
+        allow: 'none',
       }],
-      "@stylistic/jsx-pascal-case": "off",
-      "@stylistic/jsx-props-no-multi-spaces": "warn",
-      "@stylistic/jsx-quotes": ["warn", "prefer-single"],
-      "@stylistic/jsx-self-closing-comp": ["warn", {
+      '@stylistic/jsx-pascal-case': 'off',
+      '@stylistic/jsx-props-no-multi-spaces': 'warn',
+      '@stylistic/jsx-quotes': ['warn', 'prefer-single'],
+      '@stylistic/jsx-self-closing-comp': ['warn', {
         component: true,
         html: true,
       }],
-      "@stylistic/jsx-sort-props": "off",
-      "@stylistic/jsx-tag-spacing": ["warn", {
-        closingSlash: "never",
-        beforeSelfClosing: "always",
-        afterOpening: "never",
-        beforeClosing: "never",
+      '@stylistic/jsx-sort-props': 'off',
+      '@stylistic/jsx-tag-spacing': ['warn', {
+        closingSlash: 'never',
+        beforeSelfClosing: 'always',
+        afterOpening: 'never',
+        beforeClosing: 'never',
       }],
-      "@stylistic/jsx-wrap-multilines": ["warn", {
-        arrow: "parens",
+      '@stylistic/jsx-wrap-multilines': ['warn', {
+        arrow: 'parens',
         // assignment: "parens",
-        condition: "parens",
+        condition: 'parens',
         // declaration: "parens",
-        logical: "parens",
-        prop: "parens",
-        propertyValue: "parens",
-        return: "parens",
+        logical: 'parens',
+        prop: 'parens',
+        propertyValue: 'parens',
+        return: 'parens',
       }],
-      "@stylistic/key-spacing": ["warn", {
+      '@stylistic/key-spacing': ['warn', {
         beforeColon: false,
         afterColon: true,
       }],
-      "@stylistic/keyword-spacing": ["warn", {
+      '@stylistic/keyword-spacing': ['warn', {
         before: true,
         after: true,
       }],
-      "@stylistic/line-comment-position": ["warn", {
-        position: "above",
+      '@stylistic/line-comment-position': ['warn', {
+        position: 'above',
       }],
-      "@stylistic/linebreak-style": ["warn", "unix"],
-      "@stylistic/lines-around-comment": ["warn", {
+      '@stylistic/linebreak-style': ['warn', 'unix'],
+      '@stylistic/lines-around-comment': ['warn', {
         beforeBlockComment: true,
       }],
-      "@stylistic/lines-between-class-members": ["warn", {
+      '@stylistic/lines-between-class-members': ['warn', {
         enforce: [
-          { blankLine: "always", prev: "field", next: "method" },
-          { blankLine: "always", prev: "method", next: "field" },
-          { blankLine: "never", prev: "field", next: "field" },
-          { blankLine: "always", prev: "method", next: "method" },
+          { blankLine: 'always', prev: 'field', next: 'method' },
+          { blankLine: 'always', prev: 'method', next: 'field' },
+          { blankLine: 'never', prev: 'field', next: 'field' },
+          { blankLine: 'always', prev: 'method', next: 'method' },
         ],
       }],
-      "@stylistic/max-len": ["warn", {
+      '@stylistic/max-len': ['warn', {
         code: MAX_LINE_LENGTH,
         tabWidth: INDENT,
         comments: MAX_LINE_LENGTH,
@@ -185,31 +185,31 @@ export const formattingConfig = [
         ignoreTemplateLiterals: false,
         ignoreRegExpLiterals: true,
       }],
-      "@stylistic/max-statements-per-line": ["error", {
+      '@stylistic/max-statements-per-line': ['error', {
         max: 1,
       }],
-      "@stylistic/member-delimiter-style": ["warn", {
+      '@stylistic/member-delimiter-style': ['warn', {
         singleline: {
-          delimiter: "comma",
+          delimiter: 'comma',
           requireLast: false,
         },
         multiline: {
-          delimiter: "none",
+          delimiter: 'none',
           requireLast: false,
         },
-        multilineDetection: "brackets",
+        multilineDetection: 'brackets',
       }],
-      "@stylistic/multiline-comment-style": ["off", "starred-block"],
-      "@stylistic/multiline-ternary": ["warn", "always-multiline"],
-      "@stylistic/new-parens": ["warn", "always"],
-      "@stylistic/newline-per-chained-call": ["warn", {
+      '@stylistic/multiline-comment-style': ['off', 'starred-block'],
+      '@stylistic/multiline-ternary': ['warn', 'always-multiline'],
+      '@stylistic/new-parens': ['warn', 'always'],
+      '@stylistic/newline-per-chained-call': ['warn', {
         ignoreChainWithDepth: 2,
       }],
-      "@stylistic/no-confusing-arrow": ["warn", {
+      '@stylistic/no-confusing-arrow': ['warn', {
         allowParens: true,
         onlyOneSimpleParam: true,
       }],
-      "@stylistic/no-extra-parens": ["warn", "all", {
+      '@stylistic/no-extra-parens': ['warn', 'all', {
         // allowParensAfterCommentPattern: "any-string-pattern",
         // conditionalAssign: false,
         // enforceForArrowConditionals: false,
@@ -221,78 +221,78 @@ export const formattingConfig = [
         // returnAssign: false,
         // ternaryOperandBinaryExpressions: false,
       }],
-      "@stylistic/no-extra-semi": "warn",
-      "@stylistic/no-floating-decimal": "warn",
-      "@stylistic/no-mixed-operators": ["warn", {
+      '@stylistic/no-extra-semi': 'warn',
+      '@stylistic/no-floating-decimal': 'warn',
+      '@stylistic/no-mixed-operators': ['warn', {
         groups: [
-          ["+", "-", "*", "/", "%", "**"],
-          ["&", "|", "^", "~", "<<", ">>", ">>>"],
-          ["==", "!=", "===", "!==", ">", ">=", "<", "<="],
-          ["&&", "||"],
-          ["in", "instanceof"],
+          ['+', '-', '*', '/', '%', '**'],
+          ['&', '|', '^', '~', '<<', '>>', '>>>'],
+          ['==', '!=', '===', '!==', '>', '>=', '<', '<='],
+          ['&&', '||'],
+          ['in', 'instanceof'],
         ],
         allowSamePrecedence: true,
       }],
-      "@stylistic/no-mixed-spaces-and-tabs": "warn",
-      "@stylistic/no-multi-spaces": ["warn", {
+      '@stylistic/no-mixed-spaces-and-tabs': 'warn',
+      '@stylistic/no-multi-spaces': ['warn', {
         ignoreEOLComments: false,
         exceptions: {
           Property: true,
         },
         includeTabs: true,
       }],
-      "@stylistic/no-multiple-empty-lines": ["warn", {
+      '@stylistic/no-multiple-empty-lines': ['warn', {
         max: 2,
         maxBOF: 1,
         maxEOF: 0,
       }],
-      "@stylistic/no-tabs": "warn",
-      "@stylistic/no-trailing-spaces": ["warn", {
+      '@stylistic/no-tabs': 'warn',
+      '@stylistic/no-trailing-spaces': ['warn', {
         skipBlankLines: false,
         ignoreComments: false,
       }],
-      "@stylistic/no-whitespace-before-property": "warn",
-      "@stylistic/nonblock-statement-body-position": ["warn", "any"],
-      "@stylistic/object-curly-newline": ["warn", {
+      '@stylistic/no-whitespace-before-property': 'warn',
+      '@stylistic/nonblock-statement-body-position': ['warn', 'any'],
+      '@stylistic/object-curly-newline': ['warn', {
         consistent: true,
       }],
-      "@stylistic/object-curly-spacing": ["warn", "always"],
-      "@stylistic/object-property-newline": "off",
-      "@stylistic/one-var-declaration-per-line": ["warn", "initializations"],
-      "@stylistic/operator-linebreak": ["warn", "before", {
+      '@stylistic/object-curly-spacing': ['warn', 'always'],
+      '@stylistic/object-property-newline': 'off',
+      '@stylistic/one-var-declaration-per-line': ['warn', 'initializations'],
+      '@stylistic/operator-linebreak': ['warn', 'before', {
         overrides: {
-          "=": "after",
+          '=': 'after',
         },
       }],
-      "@stylistic/padded-blocks": "off",
-      "@stylistic/padding-line-between-statements": "off",
-      "@stylistic/quote-props": ["warn", "as-needed"],
-      "@stylistic/quotes": ["warn", "single", {
+      '@stylistic/padded-blocks': 'off',
+      '@stylistic/padding-line-between-statements': 'off',
+      '@stylistic/quote-props': ['warn', 'as-needed'],
+      '@stylistic/quotes': ['warn', 'single', {
         avoidEscape: true,
         allowTemplateLiterals: true,
       }],
-      "@stylistic/rest-spread-spacing": ["warn", "never"],
-      "@stylistic/semi": ["warn", "never", {
-        beforeStatementContinuationChars: "never",
+      '@stylistic/rest-spread-spacing': ['warn', 'never'],
+      '@stylistic/semi': ['warn', 'never', {
+        beforeStatementContinuationChars: 'never',
       }],
-      "@stylistic/semi-spacing": ["warn", {
+      '@stylistic/semi-spacing': ['warn', {
         before: false,
         after: true,
       }],
-      "@stylistic/semi-style": ["warn", "last"],
-      "@stylistic/space-before-blocks": ["warn", "always"],
-      "@stylistic/space-before-function-paren": ["warn", {
-        anonymous: "never",
-        asyncArrow: "always",
-        named: "never",
+      '@stylistic/semi-style': ['warn', 'last'],
+      '@stylistic/space-before-blocks': ['warn', 'always'],
+      '@stylistic/space-before-function-paren': ['warn', {
+        anonymous: 'never',
+        asyncArrow: 'always',
+        named: 'never',
       }],
-      "@stylistic/space-in-parens": ["warn", "never"],
-      "@stylistic/space-infix-ops": "warn",
-      "@stylistic/space-unary-ops": ["warn", {
+      '@stylistic/space-in-parens': ['warn', 'never'],
+      '@stylistic/space-infix-ops': 'warn',
+      '@stylistic/space-unary-ops': ['warn', {
         words: true,
         nonwords: false,
       }],
-      "@stylistic/spaced-comment": ["warn", "always", {
+      '@stylistic/spaced-comment': ['warn', 'always', {
         block: {
           balanced: true,
           exceptions: [],
@@ -303,79 +303,79 @@ export const formattingConfig = [
           markers: [],
         },
       }],
-      "@stylistic/switch-colon-spacing": ["warn", {
+      '@stylistic/switch-colon-spacing': ['warn', {
         before: false,
         after: true,
       }],
-      "@stylistic/template-curly-spacing": ["warn", "never"],
-      "@stylistic/template-tag-spacing": ["warn", "never"],
-      "@stylistic/type-annotation-spacing": ["warn", {
+      '@stylistic/template-curly-spacing': ['warn', 'never'],
+      '@stylistic/template-tag-spacing': ['warn', 'never'],
+      '@stylistic/type-annotation-spacing': ['warn', {
         before: false,
         after: true,
       }],
-      "@stylistic/type-generic-spacing": "warn",
-      "@stylistic/type-named-tuple-spacing": "warn",
-      "@stylistic/wrap-iife": ["warn", "inside", {
+      '@stylistic/type-generic-spacing': 'warn',
+      '@stylistic/type-named-tuple-spacing': 'warn',
+      '@stylistic/wrap-iife': ['warn', 'inside', {
         functionPrototypeMethods: true,
       }],
-      "@stylistic/wrap-regex": "off",
-      "@stylistic/yield-star-spacing": ["warn", "before"],
+      '@stylistic/wrap-regex': 'off',
+      '@stylistic/yield-star-spacing': ['warn', 'before'],
     },
   },
-  stylistic.configs["disable-legacy"],
+  stylistic.configs['disable-legacy'],
 
   typescriptSupportConfig,
   {
-    name: "typescript_formatting",
+    name: 'typescript_formatting',
     files: tsFileAnyPath,
     rules: {
-      "@typescript-eslint/adjacent-overload-signatures": "warn",
-      "@typescript-eslint/array-type": ["warn", {
-        default: "array",
+      '@typescript-eslint/adjacent-overload-signatures': 'warn',
+      '@typescript-eslint/array-type': ['warn', {
+        default: 'array',
       }],
-      "@typescript-eslint/ban-tslint-comment": "off",
-      "@typescript-eslint/class-literal-property-style": "off",
-      "@typescript-eslint/consistent-generic-constructors": ["warn", "constructor"],
-      "@typescript-eslint/consistent-indexed-object-style": "off",
-      "@typescript-eslint/consistent-type-assertions": ["warn", {
-        assertionStyle: "as",
-        objectLiteralTypeAssertions: "allow",
+      '@typescript-eslint/ban-tslint-comment': 'off',
+      '@typescript-eslint/class-literal-property-style': 'off',
+      '@typescript-eslint/consistent-generic-constructors': ['warn', 'constructor'],
+      '@typescript-eslint/consistent-indexed-object-style': 'off',
+      '@typescript-eslint/consistent-type-assertions': ['warn', {
+        assertionStyle: 'as',
+        objectLiteralTypeAssertions: 'allow',
       }],
-      "@typescript-eslint/consistent-type-definitions": "off",
-      "dot-notation": "off",
-      "@typescript-eslint/dot-notation": ["warn", {
+      '@typescript-eslint/consistent-type-definitions': 'off',
+      'dot-notation': 'off',
+      '@typescript-eslint/dot-notation': ['warn', {
         // eslint options
         allowKeywords: true,
-        allowPattern: "^([a-zA-Z_]+[a-zA-Z0-9_]*)?(_[a-zA-Z0-9_]*)$",
+        allowPattern: '^([a-zA-Z_]+[a-zA-Z0-9_]*)?(_[a-zA-Z0-9_]*)$',
 
         // typescript-eslint options
         allowPrivateClassPropertyAccess: false,
         allowProtectedClassPropertyAccess: false,
         allowIndexSignaturePropertyAccess: false,
       }],
-      "@typescript-eslint/no-confusing-non-null-assertion": "error",
-      "no-empty-function": "off",
-      "@typescript-eslint/no-empty-function": ["warn", {
+      '@typescript-eslint/no-confusing-non-null-assertion': 'error',
+      'no-empty-function': 'off',
+      '@typescript-eslint/no-empty-function': ['warn', {
         allow: [
           // eslint options
-          "constructors",
+          'constructors',
 
           // typescript-eslint options
-          "private-constructors",
-          "protected-constructors",
-          "overrideMethods",
+          'private-constructors',
+          'protected-constructors',
+          'overrideMethods',
         ],
       }],
-      "@typescript-eslint/no-inferrable-types": ["warn", {
+      '@typescript-eslint/no-inferrable-types': ['warn', {
         ignoreParameters: false,
         ignoreProperties: false,
       }],
-      "@typescript-eslint/non-nullable-type-assertion-style": "warn",
-      "@typescript-eslint/prefer-find": "warn",
-      "@typescript-eslint/prefer-for-of": "warn",
-      "@typescript-eslint/prefer-function-type": "warn",
-      "@typescript-eslint/prefer-includes": "warn",
-      "@typescript-eslint/prefer-nullish-coalescing": ["warn", {
+      '@typescript-eslint/non-nullable-type-assertion-style': 'warn',
+      '@typescript-eslint/prefer-find': 'warn',
+      '@typescript-eslint/prefer-for-of': 'warn',
+      '@typescript-eslint/prefer-function-type': 'warn',
+      '@typescript-eslint/prefer-includes': 'warn',
+      '@typescript-eslint/prefer-nullish-coalescing': ['warn', {
         allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing: false,
         ignoreConditionalTests: true,
         ignoreMixedLogicalExpressions: false,
@@ -387,7 +387,7 @@ export const formattingConfig = [
         },
         ignoreTernaryTests: false,
       }],
-      "@typescript-eslint/prefer-optional-chain": ["warn", {
+      '@typescript-eslint/prefer-optional-chain': ['warn', {
         allowPotentiallyUnsafeFixesThatModifyTheReturnTypeIKnowWhatImDoing: false,
         checkAny: true,
         checkUnknown: true,
@@ -397,9 +397,9 @@ export const formattingConfig = [
         checkString: true,
         requireNullish: false,
       }],
-      "@typescript-eslint/prefer-regexp-exec": "warn",
-      "@typescript-eslint/prefer-string-starts-ends-with": ["warn", {
-        allowSingleElementEquality: "never",
+      '@typescript-eslint/prefer-regexp-exec': 'warn',
+      '@typescript-eslint/prefer-string-starts-ends-with': ['warn', {
+        allowSingleElementEquality: 'never',
       }],
     },
   },
