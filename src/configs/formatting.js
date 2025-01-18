@@ -128,7 +128,7 @@ export const formattingConfig = [
       }],
       "@stylistic/jsx-pascal-case": "off",
       "@stylistic/jsx-props-no-multi-spaces": "warn",
-      "@stylistic/jsx-quotes": ["warn", "prefer-double"],
+      "@stylistic/jsx-quotes": ["warn", "prefer-single"],
       "@stylistic/jsx-self-closing-comp": ["warn", {
         component: true,
         html: true,
@@ -267,7 +267,7 @@ export const formattingConfig = [
       "@stylistic/padded-blocks": "off",
       "@stylistic/padding-line-between-statements": "off",
       "@stylistic/quote-props": ["warn", "as-needed"],
-      "@stylistic/quotes": ["warn", "double", {
+      "@stylistic/quotes": ["warn", "single", {
         avoidEscape: true,
         allowTemplateLiterals: true,
       }],
