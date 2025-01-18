@@ -14,6 +14,7 @@ export const jsFileAnyPath = [
   "**/*.js",
   "**/*.cjs",
   "**/*.mjs",
+  "**/*.jsx",
 ]
 
 export const tsFileAnyPath = [
