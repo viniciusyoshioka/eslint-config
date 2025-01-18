@@ -110,7 +110,7 @@ export const formattingConfig = [
       '@stylistic/jsx-equals-spacing': ['warn', 'never'],
       '@stylistic/jsx-first-prop-new-line': ['warn', 'multiline-multiprop'],
       '@stylistic/jsx-function-call-newline': ['warn', 'multiline'],
-      '@stylistic/jsx-indent': ['warn', 2, {
+      '@stylistic/jsx-indent': ['warn', INDENT, {
         checkAttributes: true,
         indentLogicalExpressions: true,
       }],
