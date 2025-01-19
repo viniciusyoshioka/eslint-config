@@ -336,4 +336,32 @@ export const typescriptConfig = [
       '@typescript-eslint/use-unknown-in-catch-callback-variable': 'warn',
     },
   },
+
+  {
+    name: 'disable_eslint_rules_handled_by_typescript_compiler',
+    files: [
+      ...jsFileAnyPath,
+      ...tsFileAnyPath,
+    ],
+    rules: {
+      'constructor-super': 'off',
+      'getter-return': 'off',
+      'no-class-assign': 'off',
+      'no-const-assign': 'off',
+      'no-dupe-args': 'off',
+      'no-dupe-class-members': 'off',
+      'no-dupe-keys': 'off',
+      'no-func-assign': 'off',
+      'no-import-assign': 'off',
+      'no-new-native-nonconstructor': 'off',
+      'no-obj-calls': 'off',
+      'no-setter-return': 'off',
+      'no-this-before-super': 'off',
+      'no-undef': 'off',
+      'no-unreachable': 'off',
+      'no-unsafe-negation': 'off',
+      'no-invalid-this': 'off',
+      'no-redeclare': 'off',
+    },
+  },
 ]
