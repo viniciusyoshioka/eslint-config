@@ -77,7 +77,7 @@ export const typescriptConfig = [
       // TODO: Check this rule
       // "@typescript-eslint/naming-convention": ["warn"],
       'no-array-constructor': 'off',
-      '@typescript-eslint/no-array-constructor': 'warn',
+      '@typescript-eslint/no-array-constructor': 'error',
       '@typescript-eslint/no-array-delete': 'error',
       '@typescript-eslint/no-base-to-string': 'error',
       '@typescript-eslint/no-confusing-void-expression': ['warn', {
