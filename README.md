@@ -7,7 +7,8 @@ It supports linting and formatting JavaScript and TypeScript files.
 ## Installation
 
 > [!NOTE]
-> This library requires `eslint`. If you use TypeScript, it is also required.
+> This library requires `eslint` and `@stylistic/eslint-plugin`.
+> If you use TypeScript, it also requires `typescript` and `typescript-eslint`.
 
 > [!WARNING]
 > When using TypeScript, be aware of version compatibility!
@@ -18,13 +19,13 @@ Install the dependencies with:
 
 - NPM
   ```sh
-  npm install -D eslint typescript @vinicius1313/eslint-config
+  npm install -D @vinicius1313/eslint-config typescript eslint typescript-eslint @stylistic/eslint-plugin
   ```
 
 - Yarn
 
   ```sh
-  yarn add -D eslint typescript @vinicius1313/eslint-config
+  yarn add -D @vinicius1313/eslint-config typescript eslint typescript-eslint @stylistic/eslint-plugin
   ```
 
 ## Version compatibility
