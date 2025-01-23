@@ -23,7 +23,15 @@ export const typescriptConfig = [
       ...tsFileAnyPath,
     ],
     rules: {
+      // stylistic @typescript-eslint rule
+      '@typescript-eslint/adjacent-overload-signatures': 'off',
+      // stylistic @typescript-eslint rule
+      '@typescript-eslint/array-type': 'off',
       '@typescript-eslint/await-thenable': 'warn',
+      // stylistic @typescript-eslint rule
+      '@typescript-eslint/ban-tslint-comment': 'off',
+      // stylistic @typescript-eslint rule
+      '@typescript-eslint/class-literal-property-style': 'off',
       'class-methods-use-this': 'off',
       '@typescript-eslint/class-methods-use-this': ['off', {
         exceptMethods: [],
@@ -31,12 +39,22 @@ export const typescriptConfig = [
         ignoreOverrideMethods: true,
         ignoreClassesThatImplementAnInterface: false,
       }],
+      // stylistic @typescript-eslint rule
+      '@typescript-eslint/consistent-generic-constructors': 'off',
+      // stylistic @typescript-eslint rule
+      '@typescript-eslint/consistent-indexed-object-style': 'off',
       'consistent-return': 'off',
       '@typescript-eslint/consistent-return': 'error',
+      // stylistic @typescript-eslint rule
+      '@typescript-eslint/consistent-type-assertions': 'off',
+      // stylistic @typescript-eslint rule
+      '@typescript-eslint/consistent-type-definitions': 'off',
       '@typescript-eslint/consistent-type-exports': 'warn',
-      '@typescript-eslint/consistent-type-imports': 'warn',
+      '@typescript-eslint/consistent-type-imports': 'off',
       'default-param-last': 'off',
       '@typescript-eslint/default-param-last': 'error',
+      // stylistic @typescript-eslint rule
+      '@typescript-eslint/dot-notation': 'off',
       '@typescript-eslint/explicit-function-return-type': ['warn', {
         allowConciseArrowFunctionExpressionsStartingWithVoid: false,
         allowDirectConstAssertionInArrowFunctions: true,
@@ -58,7 +76,7 @@ export const typescriptConfig = [
           properties: 'no-public',
         },
       }],
-      '@typescript-eslint/explicit-module-boundary-types': ['warn', {
+      '@typescript-eslint/explicit-module-boundary-types': ['off', {
         allowArgumentsExplicitlyTypedAsAny: false,
         allowDirectConstAssertionInArrowFunctions: true,
         allowedNames: [],
@@ -80,12 +98,14 @@ export const typescriptConfig = [
       '@typescript-eslint/no-array-constructor': 'error',
       '@typescript-eslint/no-array-delete': 'error',
       '@typescript-eslint/no-base-to-string': 'error',
+      // stylistic @typescript-eslint rule
+      '@typescript-eslint/no-confusing-non-null-assertion': 'off',
       '@typescript-eslint/no-confusing-void-expression': ['warn', {
         ignoreArrowShorthand: true,
         ignoreVoidOperator: false,
         ignoreVoidReturningFunctions: false,
       }],
-      '@typescript-eslint/no-deprecated': ['error', {
+      '@typescript-eslint/no-deprecated': ['off', {
         allow: [],
       }],
       'no-dupe-class-members': 'off',
@@ -96,8 +116,10 @@ export const typescriptConfig = [
         ignoreUnions: false,
       }],
       '@typescript-eslint/no-dynamic-delete': 'error',
+      // stylistic @typescript-eslint rule
+      '@typescript-eslint/no-empty-function': 'off',
       '@typescript-eslint/no-empty-object-type': ['warn', {
-        allowInterfaces: 'never',
+        allowInterfaces: 'always',
         allowObjectTypes: 'never',
       }],
       '@typescript-eslint/no-explicit-any': ['error', {
@@ -105,13 +127,13 @@ export const typescriptConfig = [
         ignoreRestArgs: false,
       }],
       '@typescript-eslint/no-extra-non-null-assertion': 'warn',
-      '@typescript-eslint/no-extraneous-class': ['warn', {
+      '@typescript-eslint/no-extraneous-class': ['off', {
         allowConstructorOnly: true,
         allowEmpty: false,
         allowStaticOnly: false,
         allowWithDecorator: false,
       }],
-      '@typescript-eslint/no-floating-promises': ['error', {
+      '@typescript-eslint/no-floating-promises': ['off', {
         allowForKnownSafeCalls: [],
         allowForKnownSafePromises: [],
         checkThenables: false,
@@ -121,7 +143,9 @@ export const typescriptConfig = [
       '@typescript-eslint/no-for-in-array': 'error',
       'no-implied-eval': 'off',
       '@typescript-eslint/no-implied-eval': 'error',
-      '@typescript-eslint/no-import-type-side-effects': 'error',
+      '@typescript-eslint/no-import-type-side-effects': 'off',
+      // stylistic @typescript-eslint rule
+      '@typescript-eslint/no-inferrable-types': 'off',
       'no-invalid-this': 'off',
       '@typescript-eslint/no-invalid-this': 'error',
       '@typescript-eslint/no-invalid-void-type': ['error', {
@@ -131,7 +155,7 @@ export const typescriptConfig = [
       'no-loop-func': 'off',
       '@typescript-eslint/no-loop-func': 'error',
       'no-magic-numbers': 'off',
-      '@typescript-eslint/no-magic-numbers': ['error', {
+      '@typescript-eslint/no-magic-numbers': ['off', {
         ignore: [],
         ignoreArrayIndexes: true,
         ignoreDefaultValues: true,
@@ -147,10 +171,17 @@ export const typescriptConfig = [
         checkNever: false,
       }],
       '@typescript-eslint/no-misused-new': 'error',
-      '@typescript-eslint/no-misused-promises': ['error', {
+      '@typescript-eslint/no-misused-promises': ['off', {
         checksConditionals: true,
         checksSpreads: true,
-        checksVoidReturn: true,
+        checksVoidReturn: {
+          arguments: true,
+          attributes: true,
+          inheritedMethods: true,
+          properties: true,
+          returns: true,
+          variables: true,
+        },
       }],
       '@typescript-eslint/no-misused-spread': ['error', {
         allow: [],
@@ -184,7 +215,7 @@ export const typescriptConfig = [
         allowComparingNullableBooleansToTrue: true,
       }],
       '@typescript-eslint/no-unnecessary-condition': ['warn', {
-        allowConstantLoopConditions: false,
+        allowConstantLoopConditions: true,
         checkTypePredicates: false,
       }],
       '@typescript-eslint/no-unnecessary-parameter-property-assignment': 'warn',
@@ -197,21 +228,21 @@ export const typescriptConfig = [
       '@typescript-eslint/no-unnecessary-type-constraint': 'warn',
       '@typescript-eslint/no-unnecessary-type-parameters': 'warn',
       '@typescript-eslint/no-unsafe-argument': 'error',
-      '@typescript-eslint/no-unsafe-assignment': 'error',
+      '@typescript-eslint/no-unsafe-assignment': 'off',
       '@typescript-eslint/no-unsafe-call': 'error',
       '@typescript-eslint/no-unsafe-declaration-merging': 'error',
       '@typescript-eslint/no-unsafe-enum-comparison': 'error',
       '@typescript-eslint/no-unsafe-function-type': 'error',
       '@typescript-eslint/no-unsafe-member-access': 'error',
       '@typescript-eslint/no-unsafe-return': 'error',
-      '@typescript-eslint/no-unsafe-type-assertion': 'error',
+      '@typescript-eslint/no-unsafe-type-assertion': 'off',
       '@typescript-eslint/no-unsafe-unary-minus': 'error',
       'no-unused-expressions': 'off',
       '@typescript-eslint/no-unused-expressions': 'warn',
       'no-unused-vars': 'off',
-      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-unused-vars': 'off',
       'no-use-before-define': 'off',
-      '@typescript-eslint/no-use-before-define': ['error', {
+      '@typescript-eslint/no-use-before-define': ['off', {
         functions: false,
         classes: true,
         variables: true,
@@ -224,6 +255,8 @@ export const typescriptConfig = [
       '@typescript-eslint/no-useless-constructor': 'warn',
       '@typescript-eslint/no-useless-empty-export': 'warn',
       '@typescript-eslint/no-wrapper-object-types': 'warn',
+      // stylistic @typescript-eslint rule
+      '@typescript-eslint/non-nullable-type-assertion-style': 'off',
       'no-throw-literal': 'off',
       '@typescript-eslint/only-throw-error': ['error', {
         allow: [],
@@ -249,10 +282,22 @@ export const typescriptConfig = [
         object: true,
       }],
       '@typescript-eslint/prefer-enum-initializers': 'error',
+      // stylistic @typescript-eslint rule
+      '@typescript-eslint/prefer-find': 'off',
+      // stylistic @typescript-eslint rule
+      '@typescript-eslint/prefer-for-of': 'off',
+      // stylistic @typescript-eslint rule
+      '@typescript-eslint/prefer-function-type': 'off',
+      // stylistic @typescript-eslint rule
+      '@typescript-eslint/prefer-includes': 'off',
       '@typescript-eslint/prefer-literal-enum-member': ['error', {
         allowBitwiseExpressions: false,
       }],
       '@typescript-eslint/prefer-namespace-keyword': 'error',
+      // stylistic @typescript-eslint rule
+      '@typescript-eslint/prefer-nullish-coalescing': 'off',
+      // stylistic @typescript-eslint rule
+      '@typescript-eslint/prefer-optional-chain': 'off',
       'prefer-promise-reject-errors': 'off',
       '@typescript-eslint/prefer-promise-reject-errors': ['error', {
         allowEmptyReject: false,
@@ -262,13 +307,17 @@ export const typescriptConfig = [
       '@typescript-eslint/prefer-readonly': ['warn', {
         onlyInlineLambdas: false,
       }],
-      '@typescript-eslint/prefer-readonly-parameter-types': ['warn', {
+      '@typescript-eslint/prefer-readonly-parameter-types': ['off', {
         allow: [],
         checkParameterProperties: true,
         ignoreInferredTypes: false,
         treatMethodsAsReadonly: false,
       }],
+      // stylistic @typescript-eslint rule
+      '@typescript-eslint/prefer-regexp-exec': 'off',
       '@typescript-eslint/prefer-return-this-type': 'error',
+      // stylistic @typescript-eslint rule
+      '@typescript-eslint/prefer-string-starts-ends-with': 'off',
       '@typescript-eslint/promise-function-async': ['warn', {
         allowAny: true,
         allowedPromiseNames: [],
@@ -296,7 +345,7 @@ export const typescriptConfig = [
         allowRegExp: true,
       }],
       '@typescript-eslint/return-await': ['error', 'always'],
-      '@typescript-eslint/strict-boolean-expressions': ['error', {
+      '@typescript-eslint/strict-boolean-expressions': ['off', {
         allowAny: false,
         allowNullableBoolean: false,
         allowNullableEnum: false,
@@ -309,7 +358,7 @@ export const typescriptConfig = [
       }],
       '@typescript-eslint/switch-exhaustiveness-check': ['error', {
         allowDefaultCaseForExhaustiveSwitch: true,
-        considerDefaultExhaustiveForUnions: false,
+        considerDefaultExhaustiveForUnions: true,
         requireDefaultForNonUnion: false,
       }],
       '@typescript-eslint/triple-slash-reference': ['error', {
@@ -327,7 +376,7 @@ export const typescriptConfig = [
         variableDeclaration: false,
         variableDeclarationIgnoreFunction: false,
       }],
-      '@typescript-eslint/unbound-method': ['error', {
+      '@typescript-eslint/unbound-method': ['off', {
         ignoreStatic: false,
       }],
       '@typescript-eslint/unified-signatures': ['error', {

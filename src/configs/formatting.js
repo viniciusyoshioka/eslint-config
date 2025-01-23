@@ -10,6 +10,7 @@ import {
 
 const INDENT = 2
 const MAX_LINE_LENGTH = 90
+const IS_SINGLE_QUOTES = true
 
 
 /** @type {import("eslint").Linter.Config[]} */
@@ -30,7 +31,7 @@ export const formattingConfig = [
       '@stylistic/array-bracket-spacing': ['warn', 'never'],
       '@stylistic/array-element-newline': ['warn', 'consistent'],
       '@stylistic/arrow-parens': ['warn', 'as-needed', {
-        requireForBlockBody: true,
+        requireForBlockBody: false,
       }],
       '@stylistic/arrow-spacing': ['warn', {
         before: true,
@@ -40,7 +41,18 @@ export const formattingConfig = [
       '@stylistic/brace-style': ['warn', '1tbs', {
         allowSingleLine: true,
       }],
-      '@stylistic/comma-dangle': ['warn', 'always-multiline'],
+      '@stylistic/comma-dangle': ['warn', {
+        arrays: 'always-multiline',
+        objects: 'always-multiline',
+        imports: 'always-multiline',
+        exports: 'always-multiline',
+        functions: 'always-multiline',
+        importAttributes: 'always-multiline',
+        dynamicImports: 'always-multiline',
+        enums: 'always-multiline',
+        generics: 'always-multiline',
+        tuples: 'always-multiline',
+      }],
       '@stylistic/comma-spacing': ['warn', {
         before: false,
         after: true,
@@ -119,7 +131,7 @@ export const formattingConfig = [
         maximum: 3,
         when: 'always',
       }],
-      '@stylistic/jsx-newline': ['warn', {
+      '@stylistic/jsx-newline': ['off', {
         prevent: false,
         allowMultilines: false,
       }],
@@ -128,7 +140,8 @@ export const formattingConfig = [
       }],
       '@stylistic/jsx-pascal-case': 'off',
       '@stylistic/jsx-props-no-multi-spaces': 'warn',
-      '@stylistic/jsx-quotes': ['warn', 'prefer-single'],
+      // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+      '@stylistic/jsx-quotes': ['warn', IS_SINGLE_QUOTES ? 'prefer-single' : 'prefer-double'],
       '@stylistic/jsx-self-closing-comp': ['warn', {
         component: true,
         html: true,
@@ -165,14 +178,7 @@ export const formattingConfig = [
       '@stylistic/lines-around-comment': ['warn', {
         beforeBlockComment: true,
       }],
-      '@stylistic/lines-between-class-members': ['warn', {
-        enforce: [
-          { blankLine: 'always', prev: 'field', next: 'method' },
-          { blankLine: 'always', prev: 'method', next: 'field' },
-          { blankLine: 'never', prev: 'field', next: 'field' },
-          { blankLine: 'always', prev: 'method', next: 'method' },
-        ],
-      }],
+      '@stylistic/lines-between-class-members': 'off',
       '@stylistic/max-len': ['warn', {
         code: MAX_LINE_LENGTH,
         tabWidth: INDENT,
@@ -181,8 +187,8 @@ export const formattingConfig = [
         ignoreComments: false,
         ignoreTrailingComments: false,
         ignoreUrls: true,
-        ignoreStrings: false,
-        ignoreTemplateLiterals: false,
+        ignoreStrings: true,
+        ignoreTemplateLiterals: true,
         ignoreRegExpLiterals: true,
       }],
       '@stylistic/max-statements-per-line': ['error', {
@@ -209,7 +215,7 @@ export const formattingConfig = [
         allowParens: true,
         onlyOneSimpleParam: true,
       }],
-      '@stylistic/no-extra-parens': ['warn', 'all', {
+      '@stylistic/no-extra-parens': ['off', 'all', {
         // allowParensAfterCommentPattern: "any-string-pattern",
         // conditionalAssign: false,
         // enforceForArrowConditionals: false,
@@ -217,7 +223,7 @@ export const formattingConfig = [
         // enforceForNewInMemberExpressions: false,
         // enforceForSequenceExpressions: false,
         // ignoreJSX: "none",
-        nestedBinaryExpressions: false,
+        // nestedBinaryExpressions: false,
         // returnAssign: false,
         // ternaryOperandBinaryExpressions: false,
       }],
@@ -267,7 +273,8 @@ export const formattingConfig = [
       '@stylistic/padded-blocks': 'off',
       '@stylistic/padding-line-between-statements': 'off',
       '@stylistic/quote-props': ['warn', 'as-needed'],
-      '@stylistic/quotes': ['warn', 'single', {
+      // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+      '@stylistic/quotes': ['warn', IS_SINGLE_QUOTES ? 'single' : 'double', {
         avoidEscape: true,
         allowTemplateLiterals: true,
       }],
@@ -312,6 +319,12 @@ export const formattingConfig = [
       '@stylistic/type-annotation-spacing': ['warn', {
         before: false,
         after: true,
+        overrides: {
+          arrow: {
+            before: true,
+            after: true,
+          },
+        },
       }],
       '@stylistic/type-generic-spacing': 'warn',
       '@stylistic/type-named-tuple-spacing': 'warn',

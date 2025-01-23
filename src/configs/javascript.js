@@ -28,10 +28,8 @@ export const javascriptConfig = [
       'consistent-return': 'error',
       'default-param-last': 'error',
       'init-declarations': ['warn', 'always'],
-      'no-await-in-loop': 'error',
       'no-constructor-return': 'error',
       'no-dupe-class-members': 'off',
-      'no-duplicate-imports': 'warn',
       'no-implied-eval': 'error',
       'no-invalid-this': 'error',
       'no-irregular-whitespace': ['error', {
@@ -56,12 +54,6 @@ export const javascriptConfig = [
       'no-unmodified-loop-condition': 'error',
       'no-unreachable-loop': 'error',
       'no-unused-vars': 'warn',
-      'no-use-before-define': ['error', {
-        functions: false,
-        classes: true,
-        variables: true,
-        allowNamedExports: false,
-      }],
       'no-useless-assignment': 'error',
       'max-depth': ['warn', {
         max: 4,
