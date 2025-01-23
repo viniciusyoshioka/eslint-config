@@ -44,7 +44,6 @@
   "scripts": {
     "build": "yarn tsc -b ./tsconfig.build.json",
     "lint": "yarn eslint",
-    "postinstall": "yarn build",
     "prepublish": "yarn build",
     "publish": "npm publish"
   },
