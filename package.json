@@ -1,69 +1,69 @@
 {
-  "name": "@vinicius1313/eslint-config",
-  "description": "Eslint configuration (includes linting and formatting for JS and TS)",
-  "version": "2.0.0",
-  "license": "MIT",
-  "type": "module",
-  "exports": {
-    ".": {
-      "types": "./libs/types/index.d.ts",
-      "require": "./src/configs/legacy.cjs",
-      "import": "./src/index.js",
-      "default": "./src/index.js"
+    "name": "@vinicius1313/eslint-config",
+    "description": "Eslint configuration (includes linting and formatting for JS and TS)",
+    "version": "2.0.0",
+    "license": "MIT",
+    "type": "module",
+    "exports": {
+        ".": {
+            "types": "./libs/types/index.d.ts",
+            "require": "./src/configs/legacy.cjs",
+            "import": "./src/index.js",
+            "default": "./src/index.js"
+        }
+    },
+    "files": [
+        "libs",
+        "src",
+        "README.md"
+    ],
+    "author": "Vinicius Yoshioka <71671043+viniciusyoshioka@users.noreply.github.com> (https://github.com/viniciusyoshioka)",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/viniciusyoshioka/eslint-config.git"
+    },
+    "bugs": {
+        "url": "https://github.com/viniciusyoshioka/eslint-config/issues"
+    },
+    "homepage": "https://github.com/viniciusyoshioka/eslint-config",
+    "publishConfig": {
+        "registry": "https://registry.npmjs.org/"
+    },
+    "keywords": [
+        "JavaScript",
+        "JS",
+        "TypeScript",
+        "TS",
+        "configuration",
+        "config",
+        "eslint",
+        "lint",
+        "format",
+        "formatting"
+    ],
+    "scripts": {
+        "build": "yarn tsc -b ./tsconfig.build.json",
+        "lint": "yarn eslint",
+        "prepublish": "yarn build",
+        "publish": "npm publish"
+    },
+    "peerDependencies": {
+        "eslint": ">= 9",
+        "typescript": ">=4.8.4 <5.8.0"
+    },
+    "peerDependenciesMeta": {
+        "typescript": {
+            "optional": true
+        }
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.18.0",
+        "@stylistic/eslint-plugin": "^2.13.0",
+        "@types/eslint__js": "^8.42.3",
+        "@types/react": "^19.0.7",
+        "eslint": "^9.18.0",
+        "react": "^19.0.0",
+        "typescript": "<5.8.0",
+        "typescript-eslint": "^8.20.0"
     }
-  },
-  "files": [
-    "libs",
-    "src",
-    "README.md"
-  ],
-  "author": "Vinicius Yoshioka <71671043+viniciusyoshioka@users.noreply.github.com> (https://github.com/viniciusyoshioka)",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/viniciusyoshioka/eslint-config.git"
-  },
-  "bugs": {
-    "url": "https://github.com/viniciusyoshioka/eslint-config/issues"
-  },
-  "homepage": "https://github.com/viniciusyoshioka/eslint-config",
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
-  },
-  "keywords": [
-    "JavaScript",
-    "JS",
-    "TypeScript",
-    "TS",
-    "configuration",
-    "config",
-    "eslint",
-    "lint",
-    "format",
-    "formatting"
-  ],
-  "scripts": {
-    "build": "yarn tsc -b ./tsconfig.build.json",
-    "lint": "yarn eslint",
-    "prepublish": "yarn build",
-    "publish": "npm publish"
-  },
-  "peerDependencies": {
-    "eslint": ">= 9",
-    "typescript": ">=4.8.4 <5.8.0"
-  },
-  "peerDependenciesMeta": {
-    "typescript": {
-      "optional": true
-    }
-  },
-  "devDependencies": {
-    "@eslint/js": "^9.18.0",
-    "@stylistic/eslint-plugin": "^2.13.0",
-    "@types/eslint__js": "^8.42.3",
-    "@types/react": "^19.0.7",
-    "eslint": "^9.18.0",
-    "react": "^19.0.0",
-    "typescript": "<5.8.0",
-    "typescript-eslint": "^8.20.0"
-  }
 }
