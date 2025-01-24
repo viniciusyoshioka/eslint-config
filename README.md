@@ -40,7 +40,7 @@ Install the dependencies with:
 Create a file called `eslint.config.mjs` at the root of your project and add the following content to it:
 
 ```js
-import { configs } from "@vinicius1313/eslint-config"
+import { configs } from '@vinicius1313/eslint-config'
 
 
 /** @type {import('eslint').Linter.Config[]} */
@@ -49,7 +49,7 @@ export default [
   {
     languageOptions: {
       parserOptions: {
-        tsconfigRootDir: ".",
+        tsconfigRootDir: '.',
       },
     },
   },
@@ -59,7 +59,7 @@ export default [
 Or, if you want to add other config:
 
 ```js
-import { configs } from "@vinicius1313/eslint-config"
+import { configs } from '@vinicius1313/eslint-config'
 
 
 /** @type {import('eslint').Linter.Config[]} */
@@ -68,7 +68,7 @@ export default [
   {
     languageOptions: {
       parserOptions: {
-        tsconfigRootDir: ".",
+        tsconfigRootDir: '.',
       },
     },
   },
