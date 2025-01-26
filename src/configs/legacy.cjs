@@ -1,5 +1,4 @@
-// eslint-disable-next-line @stylistic/max-len
-// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call, no-undef
+// eslint-disable-next-line @typescript-eslint/no-unsafe-call
 const { name } = require('../../package.json')
 
 
