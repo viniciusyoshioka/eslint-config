@@ -3,11 +3,11 @@ import tslint from 'typescript-eslint'
 
 export const alwaysIgnorePaths = [
   '**/node_modules/**',
-  '**/build/**',
-  '**/dist/**',
-  '**/lib/**',
-  '**/libs/**',
-  '**/public/**',
+  'build',
+  'dist',
+  'lib',
+  'libs',
+  'public',
 ]
 
 export const jsFileAnyPath = [
