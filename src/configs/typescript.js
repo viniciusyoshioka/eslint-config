@@ -92,8 +92,7 @@ export const typescriptConfig = [
       }],
       '@typescript-eslint/member-ordering': 'off',
       '@typescript-eslint/method-signature-style': 'off',
-      // TODO: Check this rule
-      // "@typescript-eslint/naming-convention": ["warn"],
+      '@typescript-eslint/naming-convention': 'off',
       'no-array-constructor': 'off',
       '@typescript-eslint/no-array-constructor': 'error',
       '@typescript-eslint/no-array-delete': 'error',
