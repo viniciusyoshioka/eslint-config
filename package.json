@@ -44,7 +44,7 @@
     "scripts": {
         "build": "yarn tsc -b ./tsconfig.build.json",
         "lint": "yarn eslint",
-        "prepublish": "yarn build",
+        "prepublish": "rm -rf ./libs && yarn build && rm ./libs/tsconfig.build.tsbuildinfo",
         "publish": "npm publish"
     },
     "peerDependencies": {
