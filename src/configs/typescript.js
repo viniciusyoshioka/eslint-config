@@ -49,8 +49,14 @@ export const typescriptConfig = [
       '@typescript-eslint/consistent-type-assertions': 'off',
       // stylistic @typescript-eslint rule
       '@typescript-eslint/consistent-type-definitions': 'off',
-      '@typescript-eslint/consistent-type-exports': 'warn',
-      '@typescript-eslint/consistent-type-imports': 'off',
+      '@typescript-eslint/consistent-type-exports': ['error', {
+        fixMixedExportsWithInlineTypeSpecifier: false,
+      }],
+      '@typescript-eslint/consistent-type-imports': ['error', {
+        disallowTypeAnnotations: true,
+        fixStyle: 'separate-type-imports',
+        prefer: 'type-imports',
+      }],
       'default-param-last': 'off',
       '@typescript-eslint/default-param-last': 'error',
       // stylistic @typescript-eslint rule
