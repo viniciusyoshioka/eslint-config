@@ -7,13 +7,13 @@
         "declaration": true,
         "declarationMap": true,
         "emitDeclarationOnly": true,
-        "skipLibCheck": true,
+        "tsBuildInfoFile": "libs/tsconfig.build.tsbuildinfo"
     },
     "include": [
-        "src",
+        "src"
     ],
     "exclude": [
         "tests",
-        "eslint.config.js",
-    ],
+        "eslint.config.js"
+    ]
 }
