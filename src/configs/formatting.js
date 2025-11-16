@@ -122,10 +122,6 @@ export const formattingConfig = [
       '@stylistic/jsx-equals-spacing': ['warn', 'never'],
       '@stylistic/jsx-first-prop-new-line': ['warn', 'multiline-multiprop'],
       '@stylistic/jsx-function-call-newline': ['warn', 'multiline'],
-      '@stylistic/jsx-indent': ['warn', INDENT, {
-        checkAttributes: true,
-        indentLogicalExpressions: true,
-      }],
       '@stylistic/jsx-indent-props': ['warn', INDENT],
       '@stylistic/jsx-max-props-per-line': ['warn', {
         maximum: 3,
@@ -139,7 +135,6 @@ export const formattingConfig = [
         allow: 'none',
       }],
       '@stylistic/jsx-pascal-case': 'off',
-      '@stylistic/jsx-props-no-multi-spaces': 'warn',
       // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
       '@stylistic/jsx-quotes': ['warn', IS_SINGLE_QUOTES ? 'prefer-single' : 'prefer-double'],
       '@stylistic/jsx-self-closing-comp': ['warn', {
@@ -244,6 +239,7 @@ export const formattingConfig = [
         ignoreEOLComments: false,
         exceptions: {
           Property: true,
+          ImportAttribute: true,
         },
         includeTabs: true,
       }],
