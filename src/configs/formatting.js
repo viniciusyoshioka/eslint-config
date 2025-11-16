@@ -25,7 +25,7 @@ export const formattingConfig = [
       ...jsFileAnyPath,
       ...tsFileAnyPath,
     ],
-    plugins: stylistic.configs['recommended-flat'].plugins,
+    plugins: stylistic.configs['recommended'].plugins,
     rules: {
       '@stylistic/array-bracket-newline': ['warn', 'consistent'],
       '@stylistic/array-bracket-spacing': ['warn', 'never'],
