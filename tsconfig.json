@@ -1,17 +1,12 @@
 {
+    "extends": "@vinicius1313/tsconfig/tsconfig.json",
     "compilerOptions": {
         "rootDir": ".",
-        "outDir": "libs",
-        "module": "Node16",
-        "lib": [
-            "ESNext",
-        ],
-        "strict": true,
-        "allowJs": true,
+        "outDir": "libs"
     },
     "include": [
         "src",
         "tests",
-        "eslint.config.js",
-    ],
+        "eslint.config.js"
+    ]
 }
