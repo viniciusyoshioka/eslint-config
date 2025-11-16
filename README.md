@@ -32,6 +32,7 @@ Install the dependencies with:
 
 | Library version | ESLint version | ESLint Config | TypeScript version | Previous documentation |
 |-----------------|----------------|---------------|--------------------|------------------------|
+`>= 2.1.0` | `>= 9` | Flat | `>=4.8.4 <6.0.0` | -
 `>= 2.0.0` | `>= 9` | Flat | `>=4.8.4 <5.8.0` | -
 `>= 1.0.0 <=1.2.2` | `< 9` | Legacy | ? | [See v1 documentation](./docs/README-v1.md)
 
