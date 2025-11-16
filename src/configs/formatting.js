@@ -276,7 +276,7 @@ export const formattingConfig = [
       // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
       '@stylistic/quotes': ['warn', IS_SINGLE_QUOTES ? 'single' : 'double', {
         avoidEscape: true,
-        allowTemplateLiterals: true,
+        allowTemplateLiterals: 'avoidEscape',
       }],
       '@stylistic/rest-spread-spacing': ['warn', 'never'],
       '@stylistic/semi': ['warn', 'never', {
