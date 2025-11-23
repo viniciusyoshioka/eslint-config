@@ -50,7 +50,7 @@ export default [
   {
     languageOptions: {
       parserOptions: {
-        tsconfigRootDir: '.',
+        tsconfigRootDir: import.meta.dirname,
       },
     },
   },
@@ -69,7 +69,7 @@ export default [
   {
     languageOptions: {
       parserOptions: {
-        tsconfigRootDir: '.',
+        tsconfigRootDir: import.meta.dirname,
       },
     },
   },
