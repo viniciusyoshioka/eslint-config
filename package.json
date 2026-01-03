@@ -1,7 +1,7 @@
 {
     "name": "@vinicius1313/eslint-config",
     "description": "Eslint configuration (includes linting and formatting for JS and TS)",
-    "version": "2.1.0",
+    "version": "2.2.0",
     "license": "MIT",
     "type": "module",
     "exports": {
