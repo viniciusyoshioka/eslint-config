@@ -48,8 +48,10 @@
         "publish": "npm publish"
     },
     "peerDependencies": {
+        "@stylistic/eslint-plugin": ">= 5.5.0",
         "eslint": ">= 9",
-        "typescript": ">=4.8.4 <6.0.0"
+        "typescript": ">=4.8.4 <6.0.0",
+        "typescript-eslint": ">= 8.46.4"
     },
     "peerDependenciesMeta": {
         "typescript": {
