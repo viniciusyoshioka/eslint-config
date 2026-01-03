@@ -110,7 +110,7 @@ export const typescriptConfig = [
         ignoreVoidOperator: false,
         ignoreVoidReturningFunctions: false,
       }],
-      '@typescript-eslint/no-deprecated': ['off', {
+      '@typescript-eslint/no-deprecated': ['warn', {
         allow: [],
       }],
       'no-dupe-class-members': 'off',
