@@ -42,8 +42,9 @@
         "formatting"
     ],
     "scripts": {
-        "build": "yarn tsc -b ./tsconfig.build.json",
+        "typecheck": "tsc --noEmit",
         "lint": "yarn eslint",
+        "build": "yarn tsc -b ./tsconfig.build.json",
         "prepublish": "rm -rf ./libs && yarn build && rm ./libs/tsconfig.build.tsbuildinfo",
         "publish": "npm publish"
     },
