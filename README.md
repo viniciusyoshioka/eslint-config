@@ -99,3 +99,35 @@ export default [
 - `typescript`
 
     This config enables linting rules for TypeScript syntax.
+
+## Troubleshooting
+
+- `<file> was not found by the project service. Consider either including it in the tsconfig.json or including it in allowDefaultProject.`
+
+If some file can't be lint due to the error above, its probably because the
+file is not in the `include` list of your `tsconfig.json`.
+
+To fix this, you can just add the file path to the `include` field of your
+`tsconfig.json` or add the following config to your `eslint.config.mjs`:
+
+```js
+import { configs } from '@vinicius1313/eslint-config'
+
+
+/** @type {import('eslint').Linter.Config[]} */
+export default [
+  ...configs.recommended,
+  {
+    languageOptions: {
+      parserOptions: {
+        tsconfigRootDir: import.meta.dirname,
+        projectService: {
+          allowDefaultProject: [
+            // Other files to enable linting
+          ],
+        },
+      },
+    },
+  },
+]
+```
