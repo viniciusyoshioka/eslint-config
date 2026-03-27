@@ -22,6 +22,12 @@ Install the dependencies with:
   npm install -D @vinicius1313/eslint-config typescript eslint typescript-eslint @stylistic/eslint-plugin
   ```
 
+- PNPM
+
+  ```sh
+  pnpm add -D @vinicius1313/eslint-config typescript eslint typescript-eslint @stylistic/eslint-plugin
+  ```
+
 - Yarn
 
   ```sh
