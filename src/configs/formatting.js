@@ -316,7 +316,7 @@ export const formattingConfig = [
         before: false,
         after: true,
         overrides: {
-          arrow: {
+          colon: {
             before: true,
             after: true,
           },
