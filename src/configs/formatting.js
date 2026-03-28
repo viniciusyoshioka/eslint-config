@@ -313,11 +313,11 @@ export const formattingConfig = [
       '@stylistic/template-curly-spacing': ['warn', 'never'],
       '@stylistic/template-tag-spacing': ['warn', 'never'],
       '@stylistic/type-annotation-spacing': ['warn', {
-        before: false,
+        before: true,
         after: true,
         overrides: {
           colon: {
-            before: true,
+            before: false,
             after: true,
           },
         },
