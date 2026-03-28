@@ -45,7 +45,7 @@
         "typecheck": "tsc --noEmit",
         "lint": "eslint '**/*.{js,cjs,mjs,jsx,ts,cts,mts,tsx}'",
         "build": "tsc",
-        "prepublish": "rm -rf ./libs && pnpm run build && rm ./libs/tsconfig.build.tsbuildinfo",
+        "prepublish": "rm -rf ./libs && pnpm run build && rm -f ./libs/tsconfig.build.tsbuildinfo",
         "publish": "npm publish"
     },
     "peerDependencies": {
