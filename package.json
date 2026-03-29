@@ -14,8 +14,7 @@
     },
     "files": [
         "libs",
-        "src",
-        "README.md"
+        "src"
     ],
     "author": "Vinicius Yoshioka <71671043+viniciusyoshioka@users.noreply.github.com> (https://github.com/viniciusyoshioka)",
     "repository": {
